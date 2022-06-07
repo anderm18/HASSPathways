@@ -1,5 +1,5 @@
 <template>
-    <v-card class="rounded-0 card" elevation="1">
+    <v-card class="card" elevation="1">
         <v-img
             height="76px"
             class="card-img"
@@ -71,7 +71,7 @@ export default {
     max-width: calc(100vw - 24px);
     display: inline-block;
     vertical-align: top;
-    border-radius: 5px !important;
+    border-radius: 5px;
 }
 
 .darken {

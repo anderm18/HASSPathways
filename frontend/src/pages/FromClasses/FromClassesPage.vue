@@ -101,6 +101,7 @@ export default {
         font-size: 15px;
         margin: 5px;
         cursor: pointer;
+        border-radius: 5px;
         }
     .check {
         width: 30px;
