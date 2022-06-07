@@ -71,6 +71,7 @@ export default {
     max-width: calc(100vw - 24px);
     display: inline-block;
     vertical-align: top;
+    border-radius: 5px !important;
 }
 
 .darken {
