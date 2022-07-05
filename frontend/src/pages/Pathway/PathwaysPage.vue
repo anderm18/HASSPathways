@@ -2,7 +2,6 @@
     <div>
         <v-container>
             <Breadcrumbs :breadcrumbs="breadcrumbs" />
-            <YearSelection />
             <h1>HASS Pathways</h1>
             <p>
                 Select a pathway below to get started, or <router-link to="/search-classes">
