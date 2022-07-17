@@ -42,7 +42,7 @@ const store = new Vuex.Store({
         // List of pathways that have been bookmarked
         bookmarkedPathways: {},
         // The calendar year to display the information about
-        year: "2021-2022"
+        year: ""
 
     },
     plugins: [createPersistedState()],

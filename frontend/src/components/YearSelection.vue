@@ -19,12 +19,11 @@ export default {
     name: 'YearSelection',
     data() {
         return {
-            selection: this.$store.state.year
+            selection: this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year
         }
     },
     computed: {
         allyears() {
-            console.log(courses)
             return Object.keys(courses)
         }
     },
