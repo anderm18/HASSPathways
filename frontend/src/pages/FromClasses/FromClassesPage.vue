@@ -82,15 +82,15 @@
                     </v-btn>
                 </v-card-title>
                 <h5 style="color: x11gray;" class="ml-4">
-                    Current selections ({{ this.selected.length }}):
-                    <li v-for="(course, index) in this.selected" :key="(course, index)" style="list-style: none; display: inline;">
-                        {{ course.name }}{{ index &lt; selected.length - 1 ? ", " : "" }}
+                    Current selections ({{ this.selectedValues.length }}):
+                    <li v-for="(course, index) in this.selectedValues" :key="(course, index)" style="list-style: none; display: inline;">
+                        {{ course.name }}{{ index &lt; selectedValues.length - 1 ? ", " : "" }}
                     </li>
                 </h5>
                 <v-data-table
-                    v-model="selected"
+                    :value="selectedValues"
                     :headers="courseHeaders"
-                    :items="courses"
+                    :items="currentCourses"
                     :single-select="false"
                     :disable-pagination="true"
                     :search="searchValue"
@@ -112,13 +112,14 @@
                     <!-- Override default row HTMl so we can add ripples + custom click stuff -->
                     <template #item="{ item, isSelected, select }">
                         <tr
-                            v-ripple
+                            :ripple="false"
                             :class="'table-row ' + (isSelected ? 'table-row_selected' : '')"
                             @click="rowClick(item, select, isSelected)"
                         >
                             <td>
                                 <v-simple-checkbox
-                                    v-ripple color="primary"
+                                    :ripple="false"
+                                    color="primary"
                                     :value="isSelected"
                                     @input="rowClick(item, select, isSelected)"
                                 />
@@ -156,20 +157,32 @@ export default {
         Breadcrumbs, YearSelection
     },
     data() {
-        const courseList = Object.values(courses).map(course => {
-            return {
-                name: course.name,
-                identifier: course.subj + '-' + course.ID + course['cross listed'].map(el => ' / ' + el).join(""),
-            };
-        });
-
         return {
             breadcrumbs: breadcrumbs.from_classes_search,
             searchValue: '',
-            courses: courseList,
             courseHeaders: TABLE_HEADERS,
-            selected: courseList.filter(course => this.$store.state.classes[course.name]),
+            selected: [],
+            useSelected: false,
             dialog: false
+        }
+    },
+    computed: {
+        currentCourses() {
+            let year = this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
+            let items = [];
+            console.log(year);
+            console.log(courses)
+            Object.values(courses[year]).forEach(course => {
+                let nextItem = {
+                    name: course.name,
+                    identifier: course.subj + '-' + course.ID + course['cross listed'].map(el => ' / ' + el).join("")
+                }
+                items.push(nextItem);
+            });
+            return items;
+        },
+        selectedValues() {
+            return this.useSelected ? this.selected.filter(course => this.$store.state.classes[course.name]) : this.currentCourses.filter(course => this.$store.state.classes[course.name]);
         }
     },
     methods: {
@@ -179,10 +192,17 @@ export default {
             // So if isSelected is false, then that means the box is checked
             select(!isSelected);
 
+            if (!this.useSelected) {
+                this.selected = this.currentCourses.filter(course => this.$store.state.classes[course.name]);
+                this.useSelected = true;
+            }
+
             if (!isSelected) { // The user just checked
                 this.$store.commit('addClass', item.name);
+                this.selected.push(item);
             } else {
                 this.$store.commit('delClass', item.name);
+                this.selected = this.selected.filter(e => e.name !== item.name);
             }
         },
 
@@ -212,7 +232,7 @@ export default {
 .table-row { cursor: pointer; }
 .table-row_selected { background-color: rgba(229, 57, 53, 0.15); }
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     width: 13px;
 }
 
@@ -231,5 +251,3 @@ export default {
 
 
 </style>
-
-
