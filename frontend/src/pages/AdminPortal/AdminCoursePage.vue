@@ -51,43 +51,43 @@
                     class="text-input"
                 />
 
-                <v-checkbox 
+                <v-checkbox
                     v-model="CI"
                     label="Communication Intensive"
                     class="mt-1 mb-1"
                     dense :hide-details="true"
                 />
-                <v-checkbox 
+                <v-checkbox
                     v-model="HI"
                     label="HASS Inquiry"
                     class="my-1 mb-4"
                     dense :hide-details="true"
                 />
-                <v-checkbox 
+                <v-checkbox
                     v-model="fall"
                     label="Offered in Fall"
                     class="my-1"
                     dense :hide-details="true"
                 />
-                <v-checkbox 
+                <v-checkbox
                     v-model="summer"
                     label="Offered in Summer"
                     class="my-1"
                     dense :hide-details="true"
                 />
-                <v-checkbox 
+                <v-checkbox
                     v-model="spring"
                     label="Offered in Spring"
                     class="mt-1 mb-8"
                     dense :hide-details="true"
                 />
-                <v-checkbox 
+                <v-checkbox
                     v-model="even"
                     label="Offered even years"
                     class="mt-1 mb-8"
                     dense :hide-details="true"
                 />
-                <v-checkbox 
+                <v-checkbox
                     v-model="odd"
                     label="Offered odd years"
                     class="mt-1 mb-8"
@@ -154,9 +154,12 @@ export default {
         }
     },
     computed: {
+        currentYear() {
+            return this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
+        },
         foundCrumbs() {
             const course = this.getCourse();
-            
+
             if(course) {
                 return breadcrumbs.admin_course_page.map(x => x || {
                     text: course.name,
@@ -211,8 +214,8 @@ export default {
             if(!this.$route.query.class) {
                 return null;
             }
-            
-            return courses[this.$route.query.class];
+
+            return courses[this.currentYear][this.$route.query.class];
         },
         submit() {
             let newCourse = this.getCourse();

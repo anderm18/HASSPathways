@@ -27,7 +27,7 @@
                     <v-text-field
                         v-model="item.name"
                         single-line
-                        clearable   
+                        clearable
                     />
                 </template>
 
@@ -35,7 +35,7 @@
                     <v-text-field
                         v-model="item.subj"
                         single-line
-                        clearable   
+                        clearable
                     />
                 </template>
 
@@ -43,7 +43,7 @@
                     <v-text-field
                         v-model="item.ID"
                         single-line
-                        clearable   
+                        clearable
                     />
                 </template>
 
@@ -70,7 +70,7 @@
                             :ripple="false"
                         />
                     </div>
-                </template> 
+                </template>
 
                 <template #item.spring="{ item }">
                     <div style="display: flex; justify-content: center">
@@ -79,7 +79,7 @@
                             :ripple="false"
                         />
                     </div>
-                </template> 
+                </template>
                 <template #item.CI="{ item }">
                     <div style="display: flex; justify-content: center">
                         <v-checkbox
@@ -87,7 +87,7 @@
                             :ripple="false"
                         />
                     </div>
-                </template> 
+                </template>
                 <template #item.HI="{ item }">
                     <div style="display: flex; justify-content: center">
                         <v-checkbox
@@ -95,14 +95,14 @@
                             :ripple="false"
                         />
                     </div>
-                </template> 
+                </template>
                 <template #item.delete="{ item }">
                     <div style="display: flex; justify-content: center">
                         <v-btn color="error" @click="remove(item.name)">
                             <v-icon>mdi-delete</v-icon>
                         </v-btn>
                     </div>
-                </template> 
+                </template>
             </v-data-table>
         </v-container>
     </div>
@@ -148,7 +148,12 @@ export default {
             this.pathways.push(pathways[key].name);
         }
     },
-    methods: {  
+    computed: {
+        currentYear() {
+            return this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
+        }
+    },
+    methods: {
         toClass(clazz) {
             let urlStart = "/admin-portal/course?class=";
             let urlEnd = clazz;
@@ -166,10 +171,10 @@ export default {
                 for(const prio in pathway) {
                     if(pathway[prio] instanceof Object && !(pathway[prio] instanceof Array)) {
                         for(const course in pathway[prio]) {
-                            if(courses[course]) {
-                                let clazz = courses[course];
+                            if(courses[this.currentYear][course]) {
+                                let clazz = courses[this.currentYear][course];
                                 clazz = JSON.parse(JSON.stringify(clazz));
-                                clazz.section = prio; 
+                                clazz.section = prio;
                                 classes.add(clazz);
                             }
                         }
@@ -187,7 +192,7 @@ export default {
             for(const clazz in classes) {
                 const key = classes[clazz].name;
                 const curr = JSON.parse(JSON.stringify(classes[clazz]));
-                const course = courses[key];
+                const course = courses[this.currentYear][key];
                 if(Object.keys(pathways[this.selectedPathway]).includes(curr.section)) {
                     if(!Object.keys(pathways[this.selectedPathway][curr.section]).includes(course.name)) {
                         console.log("Change " + curr.name + "'s section to " + curr.section);
@@ -210,5 +215,5 @@ export default {
 </script>
 
 <style>
-    
+
 </style>

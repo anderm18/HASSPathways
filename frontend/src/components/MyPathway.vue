@@ -102,14 +102,19 @@ export default {
             required: true
         }
     },
+    computed: {
+        currentYear() {
+            return this.$store.state.year == "" ? Object.keys(allCourses).reverse()[0] : this.$store.state.year;
+        }
+    },
     methods: {
         formatCourseCategory(classes) {
             if (!classes || !classes.length)
                 return []; // Shouldn't happen!
             let out = [];
             for(const clazz in classes) {
-                if(allCourses[classes[clazz]]) {
-                    let myClass = allCourses[classes[clazz]];
+                if(allCourses[this.currentYear][classes[clazz]]) {
+                    let myClass = allCourses[this.currentYear][classes[clazz]];
                     myClass.hasData = true;
                     out.push(myClass);
                 }
@@ -120,7 +125,7 @@ export default {
                     })
                 }
             }
-            
+
             return out;
         },
         colorHash(pathway) {

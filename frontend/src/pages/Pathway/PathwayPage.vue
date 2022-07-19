@@ -131,6 +131,9 @@ export default {
         }
     },
     computed: {
+        currentYear() {
+            return this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
+        },
         // Returns true if the pathway is already in the
         //  'My Pathways' page
         // Get id of the pathway, ie 'Chinese Language'
@@ -170,7 +173,7 @@ export default {
             for(const prio in curr) {
                 // Search through each course in the pathway
                 for(const course_name in curr[prio]) {
-                    const course = courses[course_name];
+                    const course = courses[this.currentYear][course_name];
                     curr[prio][course_name] = course ? course : null;
                 }
             }
