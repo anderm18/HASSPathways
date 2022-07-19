@@ -64,7 +64,8 @@ export default {
     },
     computed: {
         filteredCourses() {
-            let tempCourses = Object.entries(courses);
+            let year = this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
+            let tempCourses = Object.entries(courses[year]);
 
             if(this.searchValue != '' && this.searchValue) {
                 tempCourses = tempCourses.filter((item) => {

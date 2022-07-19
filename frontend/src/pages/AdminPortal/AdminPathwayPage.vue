@@ -142,15 +142,15 @@ export default {
             filteredCourses: []
         }
     },
+    computed: {
+        currentYear() {
+            return this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
+        }
+    },
     created() {
         this.pathways = [];
         for(const key in pathways) {
             this.pathways.push(pathways[key].name);
-        }
-    },
-    computed: {
-        currentYear() {
-            return this.$store.state.year == "" ? Object.keys(courses).reverse()[0] : this.$store.state.year;
         }
     },
     methods: {
