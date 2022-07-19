@@ -5,7 +5,7 @@
         <v-card
             v-if="searchBar"
             class="table-header-search elevation-0 ( pt-2 pb-2 pr-4 ) d-flex"
-        > 
+        >
             <v-text-field
                 v-model="search"
                 append-icon="mdi-magnify"
@@ -26,7 +26,6 @@
                 :show-desc="showDesc"
                 :description-on-hover="descriptionOnHover"
                 :graph-view="graphView"
-                @checkbox-clicked="$emit('checkbox-clicked')"
             />
         </div>
 
@@ -103,14 +102,13 @@ export default {
                     if(b.subj === undefined) return -1
                     if(a.ID === undefined)   return  1
                     if(b.ID === undefined)   return -1
-                    if(a.subj == b.subj){
-                        if(a.ID < b.ID) return -1
-                        else return 1
-                    } else if (a.subj < b.subj) return -1
+                    if(a.ID == b.ID){
+                        if(a.subj < b.subj) return -1
+                        else                return 1
+                    } else if (a.ID < b.ID) return -1
                     else return 1
                 }
             )
-
             return tempCourses
         }
     },

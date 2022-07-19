@@ -71,7 +71,8 @@
                     </v-dialog>
 
                     <!-- Next button -->
-                    <v-btn
+                    <v-btn 
+                        dark
                         color="#2E7D32" tile
                         to="/from-classes"
                         class="mr-2 mobile-btn"

@@ -2,6 +2,8 @@
     <div>
         <v-container>
             <Breadcrumbs :breadcrumbs="foundCrumbs" />
+            <YearSelection />
+
             <h1 class="mb-4">
                 Modify Course Info
             </h1>
@@ -121,12 +123,13 @@
 <script>
 import Breadcrumbs from '../../components/Breadcrumbs'
 import breadcrumbs from '../../data/breadcrumbs.js'
+import YearSelection from '../../components/YearSelection.vue'
 import axios from 'axios'
 import { courses, pathways } from '../../data/data.js'
 
 export default {
     components: {
-        Breadcrumbs
+        Breadcrumbs, YearSelection
     },
     data() {
         return {

@@ -9,7 +9,7 @@
             <template #activator="{ on, attrs }">
                 <v-chip
                     :class="[!myModifiers.includes(modifier) ? 'modifier--inactive' : '' , 'modifier', 'modifier--text']"
-                    :color="modifiers[modifier].color || 'primary'"
+                    :color="modifiers[modifier].color || 'dd4e47'"
                     v-bind="attrs"
                     v-on="on"
                 >

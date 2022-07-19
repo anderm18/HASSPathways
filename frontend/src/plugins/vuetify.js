@@ -7,9 +7,9 @@ export default new Vuetify({
     theme: {
         themes: {
             light: {
-                primary: '#ff4040', // main color NOT background
-                secondary: '#b0bec5', // accent color, unused as of now
-                anchor: '#1976d2', // link color
+                primary: '#f73e3e',
+                secondary: '#b0bec5',
+                anchor: '#1976d2',
             },
             dark: {
                 primary: '#ff4040',

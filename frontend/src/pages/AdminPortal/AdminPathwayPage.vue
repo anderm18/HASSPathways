@@ -2,6 +2,7 @@
     <div>
         <v-container>
             <Breadcrumbs :breadcrumbs="breadcrumbs" />
+            <YearSelection />
             <v-autocomplete
                 v-model="selectedPathway"
                 clearable
@@ -46,14 +47,6 @@
                         clearable
                     />
                 </template>
-
-                <template #item.section="{ item }">
-                    <v-select
-                        v-model="item.section"
-                        :items="sections"
-                    />
-                </template>
-
                 <template #item.fall="{ item }">
                     <div style="display: flex; justify-content: center">
                         <v-checkbox
@@ -62,7 +55,6 @@
                         />
                     </div>
                 </template>
-
                 <template #item.summer="{ item }">
                     <div style="display: flex; justify-content: center">
                         <v-checkbox
@@ -111,27 +103,26 @@
 <script>
 import Breadcrumbs from '../../components/Breadcrumbs'
 import breadcrumbs from '../../data/breadcrumbs.js'
+import YearSelection from '../../components/YearSelection.vue'
 import { courses, pathways } from '../../data/data.js'
 
 export default {
     components: {
-        Breadcrumbs
+        Breadcrumbs, YearSelection
     },
     data() {
         return {
             breadcrumbs: breadcrumbs.admin_pathway_page,
             selectedPathway: "",
             pathways: [],
-            sections: ["one_of", "required", "remaining"],
             headers: [
                 {
                     text: 'Course Name',
                     align: 'start',
                     value: 'name',
                 },
-                { text: 'Prefix', value: 'prefix', align: 'center', width: 115},
-                { text: 'Course Code', value: 'ID', align: 'center', width: 115},
-                { text: 'Section', value: 'section', align: 'center', width: 200},
+                { text: 'Prefix', value: 'prefix', align: 'center'},
+                { text: 'Course Code', value: 'ID', align: 'center'},
                 { text: 'Fall', value: 'fall', align: 'center'},
                 { text: 'Spring', value: 'spring', align: 'center'},
                 { text: 'Summer', value: 'summer', align: 'center'},
@@ -174,7 +165,6 @@ export default {
                             if(courses[this.currentYear][course]) {
                                 let clazz = courses[this.currentYear][course];
                                 clazz = JSON.parse(JSON.stringify(clazz));
-                                clazz.section = prio;
                                 classes.add(clazz);
                             }
                         }
@@ -193,15 +183,6 @@ export default {
                 const key = classes[clazz].name;
                 const curr = JSON.parse(JSON.stringify(classes[clazz]));
                 const course = courses[this.currentYear][key];
-                if(Object.keys(pathways[this.selectedPathway]).includes(curr.section)) {
-                    if(!Object.keys(pathways[this.selectedPathway][curr.section]).includes(course.name)) {
-                        console.log("Change " + curr.name + "'s section to " + curr.section);
-                    }
-                }
-                else {
-                    console.log("Change " + curr.name + "'s section to " + curr.section);
-                }
-                delete curr.section;
                 if(JSON.stringify(curr) != JSON.stringify(course)) {
                     console.log(curr);
                 }

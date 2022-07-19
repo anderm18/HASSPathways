@@ -2,6 +2,7 @@
     <div>
         <v-container>
             <Breadcrumbs :breadcrumbs="breadcrumbs" />
+            <YearSelection />
             <h1>Search for the classes to edit!</h1>
             <h3>Type in the name of the course or the course ID to search for the courses you have taken</h3>
             <div class="search-field">
@@ -48,11 +49,12 @@
 <script>
 import Breadcrumbs from '../../components/Breadcrumbs'
 import breadcrumbs from '../../data/breadcrumbs.js'
+import YearSelection from '../../components/YearSelection.vue'
 import { courses } from '../../data/data.js'
 
 export default {
     components: {
-        Breadcrumbs
+        Breadcrumbs, YearSelection
     },
     data() {
         return {

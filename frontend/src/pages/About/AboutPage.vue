@@ -102,5 +102,9 @@ export default {
       flex-wrap: wrap;
       justify-content: left;
 }
+
+.v-expansion-panel-content>>> .v-expansion-panel-content__wrap {
+  padding: 10px !important;
+}
 </style>
 
