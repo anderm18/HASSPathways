@@ -12,7 +12,7 @@ export const modifiers = {
         name: 'Summer',
         tooltip: 'Offered in the summer',
         icon: null, // 'mdi-weather-sunset',
-        color: colors.cyan.lighten1,
+        color: colors.cyan.darken1,
         search: ['summer']
     },
     'Spring': {
