@@ -22,7 +22,7 @@
                     @click="toggleCheckbox()"
                     @keydown.13="toggleCheckbox()"
                     v-on="on"
-                >
+                    >
                     <v-list-item one-line>
                         <v-list-item-content class="pb-0">
                             <div style="cursor: pointer">
@@ -120,18 +120,18 @@
                 </div>
             </v-card-text>
             <v-card-text
+                v-if="course.ID != null"
+            >
+                <a :href="`/course?course=${encodeURIComponent(course.name)}`"> Course Link</a>
+                &nbsp; for {{ course.name }}
+            </v-card-text>  
+            <v-card-text
                 v-if="course.ID == null"
                 class="class-card__desc"
             >
                 Data not found within RPI catalog, see SIS for more info.
             </v-card-text>
         </v-card>
-        <v-card-text
-            v-if="course.ID != null"
-        >
-            <a :href="`/course?course=${encodeURIComponent(course.name)}`"> Course Link</a>
-            &nbsp; for {{ course.name }}
-        </v-card-text>
     </div>
 </template>
 
