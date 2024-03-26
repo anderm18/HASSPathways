@@ -38,7 +38,7 @@
                                     style="z-index: 99"
                                 />
                                 <h1 class="text-h5 class-card__title">
-                                    {{ course.name }}
+                                    <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> {{ course.name }}</a>
                                 </h1>
                                 <small v-if="course.ID != null" class="class-card__subtitle">
                                     {{ course.subj }}-{{ course.ID }}
@@ -90,7 +90,7 @@
                             style="z-index: 99"
                         />
                         <h1 class="text-h5 class-card__title">
-                            {{ course.name }}
+                            <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> {{ course.name }}</a>
                         </h1>
                         <small v-if="course.ID != null" class="class-card__subtitle">
                             {{ course.subj }}-{{ course.ID }}
@@ -118,13 +118,7 @@
                 <div v-else>
                     Taught by: Unknown
                 </div>
-            </v-card-text>
-            <v-card-text
-                v-if="course.ID != null"
-            >
-                <a :href="`/course?course=${encodeURIComponent(course.name)}`"> Course Link</a>
-                &nbsp; for {{ course.name }}
-            </v-card-text>  
+            </v-card-text> 
             <v-card-text
                 v-if="course.ID == null"
                 class="class-card__desc"
@@ -134,6 +128,8 @@
         </v-card>
     </div>
 </template>
+
+
 
 <script>
 import CourseTableModifiers from './CourseTableModifiers'
