@@ -169,13 +169,7 @@
     },
     "Global Languages and Cultures": {
         "name": "Global Languages and Cultures",
-        "description": [
-            {
-                "h:em": "same foreign language",
-                "#text": "This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures.   Students who select this pathway must have all courses that are part of the pathway be in the.   These courses may be fulfilled through transfer credits."
-            },
-            "Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing).   After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically.   Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor (*see note below)."
-        ],
+        "description": "This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures.   Students who select this pathway must have all courses that are part of the pathway be in the.   These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing).   After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor.",
         "Remaining": {
             "Social Media: East & West": "COMM 4535",
             "Language and Power": "INQR 1492",
@@ -244,12 +238,7 @@
     },
     "Information Technology and Web Sciences": {
         "name": "Information Technology and Web Sciences",
-        "description": [
-            "The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable.",
-            "To complete this integrative pathway, students must choose a minimum of 12 credits  as described below.   Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
-            "  ",
-            "  "
-        ],
+        "description": "The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits  as described below.   Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
         "Required": {
             "IT and Society": "ITWS1220",
             "Introduction to Human Computer Interaction": "ITWS2210"
@@ -276,10 +265,7 @@
     },
     "Media and Culture": {
         "name": "Media and Culture",
-        "description": [
-            "This pathway examines different forms of expression and their cultural contexts in a variety of media, including film, television, photography, and new media. Its components will enhance creative and critical thinking, communication practices, and awareness of cultural and individual identities. The focus on cultural and media literacy will improve the career readiness and social awareness of those in any program at RPI.",
-            "To complete this integrative pathway, students must choose a minimum of 12 credits as from the course list below; only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway."
-        ],
+        "description": "This pathway examines different forms of expression and their cultural contexts in a variety of media, including film, television, photography, and new media. Its components will enhance creative and critical thinking, communication practices, and awareness of cultural and individual identities. The focus on cultural and media literacy will improve the career readiness and social awareness of those in any program at RPI. To complete this integrative pathway, students must choose a minimum of 12 credits as from the course list below; only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
         "Remaining": {
             "Documentary Film": "COMM 2440",
             "Communication Theory and Practice": "COMM 2520",
@@ -448,10 +434,7 @@
     },
     "Public Health": {
         "name": "Public Health",
-        "description": [
-            "The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med  track beyond the pre-health/pre-med pathway.",
-            "  "
-        ],
+        "description": "The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med  track beyond the pre-health/pre-med pathway.",
         "Remaining": {
             "Stress and the Brain": "PSYC 4610",
             "Hormones, Brain, and Behavior": "PSYC 4700",
