@@ -38,7 +38,7 @@
                                     style="z-index: 99"
                                 />
                                 <h1 class="text-h5 class-card__title">
-                                    <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> {{ course.name }}</a>
+                                    {{ course.name }}
                                 </h1>
                                 <small v-if="course.ID != null" class="class-card__subtitle">
                                     {{ course.subj }}-{{ course.ID }}
@@ -128,7 +128,6 @@
         </v-card>
     </div>
 </template>
-
 
 
 <script>
