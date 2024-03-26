@@ -122,7 +122,7 @@
             <v-card-text
                 v-if="course.ID != null"
             >
-                <a :href="`/course?course=${encodeURIComponent(course.name)}`"> Course Link</a>
+                <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> Course Link</a>
                 &nbsp; for {{ course.name }}
             </v-card-text>  
             <v-card-text
@@ -134,6 +134,7 @@
         </v-card>
     </div>
 </template>
+
 
 <script>
 import CourseTableModifiers from './CourseTableModifiers'
