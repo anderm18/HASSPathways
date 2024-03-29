@@ -183,33 +183,33 @@ export default {
             // this.hover = !this.hover;
         },
         toggleCheckbox() {
-            let selection = window.getSelection();
-            if (selection.isCollapsed) {
-                this.selected = 1 - this.selected;
-                console.log(this.course.prerequisites)
+            this.selected = 1 - this.selected;
+            //console.log(this.course.prerequisites)
 
-                // Save selection
-                const c = { pathwayID: this.pathwayId, course: this.course.name };
-                if (this.selected) {
-                    this.$store.commit('addCourse', c);
-                    this.$emit('checkbox-clicked', { name: this.course.name, selected: true });
-                    // now check to see if there are pre-requisites present
-                    if (this.course.prerequisites && this.course.prerequisites.length != 0) {
-                        // console.log("pre-requisite")
-                        this.alert = true;
-                        // this.$emit("showAlert", this.course.prerequisites );
-                    }
-                } else {
-                    this.$store.commit('delCourse', c);
-                    this.$emit('checkbox-clicked', { name: this.course.name, selected: false });
+            // Save selection
+            const c = { pathwayID: this.pathwayId, course: this.course.name };
+            if (this.selected) {
+                this.$store.commit('addCourse', c);
+                this.$emit('checkbox-clicked', { name: this.course.name, selected: true });
+                // now check to see if there are pre-requisites present
+                if (this.course.prerequisites && this.course.prerequisites.length != 0) {
+                    // console.log("pre-requisite")
+                    this.alert = true;
+                    // this.$emit("showAlert", this.course.prerequisites );
+                }
+            } else {
+                this.$store.commit('delCourse', c);
+                this.$emit('checkbox-clicked', { name: this.course.name, selected: false });
+                this.alert = false;
+                if (this.course.prerequisites && this.course.prerequisites.length != 0) {
+                    // console.log("pre-requisite")
                     this.alert = false;
-                    if (this.course.prerequisites && this.course.prerequisites.length != 0) {
-                        // console.log("pre-requisite")
-                        this.alert = false;
-                        // this.$emit("hideAlert", this.course.prerequisites );
-                    }
+                    // this.$emit("hideAlert", this.course.prerequisites );
                 }
             }
+            /*let selection = window.getSelection();
+            if (selection.isCollapsed) {
+            }*/
         },
         selectedClass() {
             return this.selected ? 'class-card--selected' : '';
