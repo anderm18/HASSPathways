@@ -36,10 +36,7 @@
     },
     "Design, Innovation, and Society": {
         "name": "Design, Innovation, and Society",
-        "description": [
-            "The pathway in Design, Innovation, and Society (DIS) provides creative, socially conscious students deep context for a broad education in design and innovation. Students take a sequence of studio-based courses that address real-world social and environmental challenges.",
-            "To complete this integrative pathway, student must choose 12 credits as described:"
-        ],
+        "description": "The pathway in Design, Innovation, and Society (DIS) provides creative, socially conscious students deep context for a broad education in design and innovation. Students take a sequence of studio-based courses that address real-world social and environmental challenges. To complete this integrative pathway, student must choose 12 credits as described:",
         "Remaining": {
             "Design and Innovation Studio I": "INQR 1610",
             "Design and Innovation Studio II": "STSO 2610",
@@ -149,13 +146,7 @@
     },
     "Game Studies": {
         "name": "Game Studies",
-        "description": [
-            "This pathway explores the design, creation, and analysis of games. Students completing this pathway will develop depth in creative and critical thinking, technological proficiency, and multicultural awareness.",
-            {
-                "h:strong": "This pathway is restricted to students in the Game and Simulation Arts and Sciences (GSAS) major."
-            },
-            "  "
-        ],
+        "description": "This pathway explores the design, creation, and analysis of games. Students completing this pathway will develop depth in creative and critical thinking, technological proficiency, and multicultural awareness. This pathway is restricted to students in the Game and Simulation Arts and Sciences (GSAS) major.",
         "Remaining": {
             "History and Culture of Games": "GSAS 1600",
             "Introduction to Game Design": "GSAS 2510",
@@ -543,10 +534,7 @@
     },
     "Sustainability Studies": {
         "name": "Sustainability Studies",
-        "description": [
-            "The pathway in Sustainability focuses on the interactions between various systems - social, political, cultural, economic, technological and ecological - that undergird environmental sustainability. Students use interdisciplinary approaches to investigate environmental problems.",
-            "  "
-        ],
+        "description": "The pathway in Sustainability focuses on the interactions between various systems - social, political, cultural, economic, technological and ecological - that undergird environmental sustainability. Students use interdisciplinary approaches to investigate environmental problems.",
         "One Of0": {
             "Science, Technology, and Society": "STSO1110",
             "Nature/Society": "INQR1110",
@@ -574,20 +562,12 @@
     },
     "Transfer Student Arts and Humanities": {
         "name": "Transfer Student Arts and Humanities",
-        "description": [
-            "This  pathway  is intended for transfer students that enter with sophomore  status or above and  who have completed significant coursework within the arts and humanities to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer.  ",
-            "To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level:",
-            "  "
-        ],
+        "description": "This  pathway  is intended for transfer students that enter with sophomore  status or above and  who have completed significant coursework within the arts and humanities to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level:",
         "Remaining": {}
     },
     "Transfer Student Social Science": {
         "name": "Transfer Student Social Science",
-        "description": [
-            "This pathway is intended for transfer students that enter with sophomore status or above and  who have completed significant coursework within the social sciences  to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer.",
-            "To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level.",
-            "  "
-        ],
+        "description": "This pathway is intended for transfer students that enter with sophomore status or above and  who have completed significant coursework within the social sciences  to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level.",
         "Remaining": {}
     },
     "Visual and Media Arts": {
@@ -643,14 +623,7 @@
     },
     "Well-being: Body and Mind": {
         "name": "Well-being: Body and Mind",
-        "description": [
-            {
-                "h:strong": "",
-                "#text": "How do humans maintain a sense of well-being in their lives?What are the relationships between individual, social and ecological health?   The \"Well-being: Body and Mind\" Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts."
-            },
-            "The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.",
-            "  "
-        ],
+        "description": "How do humans maintain a sense of well-being in their lives?What are the relationships between individual, social and ecological health?   The \"Well-being: Body and Mind\" Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts. The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.",
         "Remaining": {
             "Basic Drawing": "ARTS 1200",
             "Deep Listening": "ARTS 2180",
