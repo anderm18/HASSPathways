@@ -228,6 +228,7 @@ export default {
 
 <style scoped lang="scss">
 
+
 .v-alert {
     position: absolute;
     z-index: 100;
@@ -263,6 +264,18 @@ export default {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+
+    .class-card__title a{
+        line-height: 1.05em;
+        display: inline-block;
+        font-size: 1.2em !important;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: none; 
+        color: inherit;
     }
 
     .class-card__subtitle {
