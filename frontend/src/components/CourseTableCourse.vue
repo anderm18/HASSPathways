@@ -38,7 +38,7 @@
                                     style="z-index: 99"
                                 />
                                 <h1 class="text-h5 class-card__title">
-                                    {{ course.name }}
+                                    <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> {{ course.name }}</a>
                                 </h1>
                                 <small v-if="course.ID != null" class="class-card__subtitle">
                                     {{ course.subj }}-{{ course.ID }}
@@ -90,7 +90,7 @@
                             style="z-index: 99"
                         />
                         <h1 class="text-h5 class-card__title">
-                            {{ course.name }}
+                            <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> {{ course.name }}</a>
                         </h1>
                         <small v-if="course.ID != null" class="class-card__subtitle">
                             {{ course.subj }}-{{ course.ID }}
@@ -118,13 +118,7 @@
                 <div v-else>
                     Taught by: Unknown
                 </div>
-            </v-card-text>
-            <v-card-text
-                v-if="course.ID != null"
-            >
-                <a :href="`/course?course=${encodeURIComponent(course.name)}`" @click.stop> Course Link</a>
-                &nbsp; for {{ course.name }}
-            </v-card-text>  
+            </v-card-text> 
             <v-card-text
                 v-if="course.ID == null"
                 class="class-card__desc"
@@ -234,6 +228,7 @@ export default {
 
 <style scoped lang="scss">
 
+
 .v-alert {
     position: absolute;
     z-index: 100;
@@ -269,6 +264,18 @@ export default {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+
+    .class-card__title a{
+        line-height: 1.05em;
+        display: inline-block;
+        font-size: 1.2em !important;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: none; 
+        color: inherit;
     }
 
     .class-card__subtitle {
