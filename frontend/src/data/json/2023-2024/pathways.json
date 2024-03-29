@@ -36,10 +36,7 @@
     },
     "Design, Innovation, and Society": {
         "name": "Design, Innovation, and Society",
-        "description": [
-            "The pathway in Design, Innovation, and Society (DIS) provides creative, socially conscious students deep context for a broad education in design and innovation. Students take a sequence of studio-based courses that address real-world social and environmental challenges.",
-            "To complete this integrative pathway, student must choose 12 credits as described:"
-        ],
+        "description": "The pathway in Design, Innovation, and Society (DIS) provides creative, socially conscious students deep context for a broad education in design and innovation. Students take a sequence of studio-based courses that address real-world social and environmental challenges. To complete this integrative pathway, student must choose 12 credits as described:",
         "Remaining": {
             "Design and Innovation Studio I": "INQR 1610",
             "Design and Innovation Studio II": "STSO 2610",
@@ -149,13 +146,7 @@
     },
     "Game Studies": {
         "name": "Game Studies",
-        "description": [
-            "This pathway explores the design, creation, and analysis of games. Students completing this pathway will develop depth in creative and critical thinking, technological proficiency, and multicultural awareness.",
-            {
-                "h:strong": "This pathway is restricted to students in the Game and Simulation Arts and Sciences (GSAS) major."
-            },
-            "  "
-        ],
+        "description": "This pathway explores the design, creation, and analysis of games. Students completing this pathway will develop depth in creative and critical thinking, technological proficiency, and multicultural awareness. This pathway is restricted to students in the Game and Simulation Arts and Sciences (GSAS) major.",
         "Remaining": {
             "History and Culture of Games": "GSAS 1600",
             "Introduction to Game Design": "GSAS 2510",
@@ -169,13 +160,7 @@
     },
     "Global Languages and Cultures": {
         "name": "Global Languages and Cultures",
-        "description": [
-            {
-                "h:em": "same foreign language",
-                "#text": "This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures.   Students who select this pathway must have all courses that are part of the pathway be in the.   These courses may be fulfilled through transfer credits."
-            },
-            "Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing).   After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically.   Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor (*see note below)."
-        ],
+        "description": "This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures.   Students who select this pathway must have all courses that are part of the pathway be in the.   These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing).   After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor.",
         "Remaining": {
             "Social Media: East & West": "COMM 4535",
             "Language and Power": "INQR 1492",
@@ -244,12 +229,7 @@
     },
     "Information Technology and Web Sciences": {
         "name": "Information Technology and Web Sciences",
-        "description": [
-            "The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable.",
-            "To complete this integrative pathway, students must choose a minimum of 12 credits  as described below.   Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
-            "  ",
-            "  "
-        ],
+        "description": "The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits  as described below.   Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
         "Required": {
             "IT and Society": "ITWS1220",
             "Introduction to Human Computer Interaction": "ITWS2210"
@@ -276,10 +256,7 @@
     },
     "Media and Culture": {
         "name": "Media and Culture",
-        "description": [
-            "This pathway examines different forms of expression and their cultural contexts in a variety of media, including film, television, photography, and new media. Its components will enhance creative and critical thinking, communication practices, and awareness of cultural and individual identities. The focus on cultural and media literacy will improve the career readiness and social awareness of those in any program at RPI.",
-            "To complete this integrative pathway, students must choose a minimum of 12 credits as from the course list below; only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway."
-        ],
+        "description": "This pathway examines different forms of expression and their cultural contexts in a variety of media, including film, television, photography, and new media. Its components will enhance creative and critical thinking, communication practices, and awareness of cultural and individual identities. The focus on cultural and media literacy will improve the career readiness and social awareness of those in any program at RPI. To complete this integrative pathway, students must choose a minimum of 12 credits as from the course list below; only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
         "Remaining": {
             "Documentary Film": "COMM 2440",
             "Communication Theory and Practice": "COMM 2520",
@@ -448,10 +425,7 @@
     },
     "Public Health": {
         "name": "Public Health",
-        "description": [
-            "The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med  track beyond the pre-health/pre-med pathway.",
-            "  "
-        ],
+        "description": "The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med  track beyond the pre-health/pre-med pathway.",
         "Remaining": {
             "Stress and the Brain": "PSYC 4610",
             "Hormones, Brain, and Behavior": "PSYC 4700",
@@ -560,10 +534,7 @@
     },
     "Sustainability Studies": {
         "name": "Sustainability Studies",
-        "description": [
-            "The pathway in Sustainability focuses on the interactions between various systems - social, political, cultural, economic, technological and ecological - that undergird environmental sustainability. Students use interdisciplinary approaches to investigate environmental problems.",
-            "  "
-        ],
+        "description": "The pathway in Sustainability focuses on the interactions between various systems - social, political, cultural, economic, technological and ecological - that undergird environmental sustainability. Students use interdisciplinary approaches to investigate environmental problems.",
         "One Of0": {
             "Science, Technology, and Society": "STSO1110",
             "Nature/Society": "INQR1110",
@@ -591,20 +562,12 @@
     },
     "Transfer Student Arts and Humanities": {
         "name": "Transfer Student Arts and Humanities",
-        "description": [
-            "This  pathway  is intended for transfer students that enter with sophomore  status or above and  who have completed significant coursework within the arts and humanities to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer.  ",
-            "To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level:",
-            "  "
-        ],
+        "description": "This  pathway  is intended for transfer students that enter with sophomore  status or above and  who have completed significant coursework within the arts and humanities to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level:",
         "Remaining": {}
     },
     "Transfer Student Social Science": {
         "name": "Transfer Student Social Science",
-        "description": [
-            "This pathway is intended for transfer students that enter with sophomore status or above and  who have completed significant coursework within the social sciences  to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer.",
-            "To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level.",
-            "  "
-        ],
+        "description": "This pathway is intended for transfer students that enter with sophomore status or above and  who have completed significant coursework within the social sciences  to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level.",
         "Remaining": {}
     },
     "Visual and Media Arts": {
@@ -660,14 +623,7 @@
     },
     "Well-being: Body and Mind": {
         "name": "Well-being: Body and Mind",
-        "description": [
-            {
-                "h:strong": "",
-                "#text": "How do humans maintain a sense of well-being in their lives?What are the relationships between individual, social and ecological health?   The \"Well-being: Body and Mind\" Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts."
-            },
-            "The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.",
-            "  "
-        ],
+        "description": "How do humans maintain a sense of well-being in their lives?What are the relationships between individual, social and ecological health?   The \"Well-being: Body and Mind\" Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts. The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.",
         "Remaining": {
             "Basic Drawing": "ARTS 1200",
             "Deep Listening": "ARTS 2180",
