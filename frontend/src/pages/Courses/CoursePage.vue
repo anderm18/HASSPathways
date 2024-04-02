@@ -9,7 +9,9 @@
             <h4>This course is a part of these pathways: </h4>
         </div>
         <ul>
-            <li v-for="(item, index) in get_pathways" :key="index">{{ item.name }}</li>
+            <li v-for="(item, index) in get_pathways" :key="index" class="title-text">
+                <a :href="`/pathway?pathway=${encodeURIComponent(title)}`" @click.stop>  {{ item.name }}</a>
+            </li>
         </ul>
         <br>
         <template v-if="course.professors.length !== 0">
@@ -275,4 +277,11 @@ export default {
         display: flex;
         flex-wrap: wrap;
     }
+
+    .title-text a{
+            padding-right: 20px;
+            display: inline;
+            font-size: 12pt;
+            flex-shrink: 0;
+        }
 </style>
