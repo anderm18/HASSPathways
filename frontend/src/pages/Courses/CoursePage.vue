@@ -5,6 +5,13 @@
             <h1>{{ course.subj }}-{{ course.ID }}: {{ course.name }}</h1>
         </div>
         <p>{{ course.description }}</p>
+        <div class="header">
+            <h4>This course is a part of these pathways: </h4>
+        </div>
+        <ul>
+            <li v-for="(item, index) in get_pathways" :key="index">{{ item.name }}</li>
+        </ul>
+        <br>
         <template v-if="course.professors.length !== 0">
             <h2>Professors:</h2>
             <ul>
@@ -78,6 +85,7 @@ export default {
     },
     data() {
         return {
+            pathwaysData: {},
             coursesData: {},
             professorsData: {},
             panel: [],
@@ -157,6 +165,38 @@ export default {
         numSections() {
             return this.course.sections.length;
         },
+        get_pathways() {
+            let myPathways = [];
+            for(const key in this.pathwaysData) {
+                let thisPathway = {name: "", courses: new Set()};
+                const singlePathway = this.pathwaysData[key];
+                thisPathway.name = key;
+                for(const prio in singlePathway) {
+                    //Checks if it has classes within it
+                    if(singlePathway[prio] instanceof Object && !(singlePathway[prio] instanceof Array)) {
+                        const courses = singlePathway[prio];
+                        for(const name in courses) {
+                            if(this.course.name==name) {
+                                thisPathway.courses.add(name);
+                            }
+                        }
+                    }
+                }
+                if(thisPathway.courses.size > 0) {
+                    thisPathway.courses = Array.from(thisPathway.courses.values());
+                    myPathways.push(thisPathway);
+                }
+            }
+
+            myPathways.sort(function(a, b){
+                // return a.courses.length - b.courses.length
+                if(a.courses.length == b.courses.length){
+                    return a.name < b.name ? -1 : 1
+                } else
+                    return a.courses.length < b.courses.length ? 1 : -1
+            })
+            return myPathways;
+        },
     },
     created() {
         const year = this.$store.state.year;
@@ -170,6 +210,7 @@ export default {
         import('../../data/json/professors.json').then((val) => {
             this.professorsData = Object.freeze(val);
         });
+        import('../../data/json/' + year + '/pathways.json').then((val) => this.pathwaysData = Object.freeze(val));
     },
     methods: {
         all(prof) {
