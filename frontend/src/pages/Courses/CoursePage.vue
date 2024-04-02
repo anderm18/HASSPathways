@@ -10,7 +10,7 @@
         </div>
         <ul>
             <li v-for="(item, index) in get_pathways" :key="index" class="title-text">
-                <a :href="`/pathway?pathway=${encodeURIComponent(title)}`" @click.stop>  {{ item.name }}</a>
+                <a :href="`/pathway?pathway=${encodeURIComponent(item.name)}`" @click.stop>  {{ item.name }}</a>
             </li>
         </ul>
         <br>
