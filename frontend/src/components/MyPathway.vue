@@ -5,10 +5,9 @@
         :style="{ borderColor: colorHash(title) }"
     >
         <v-card-title class="font-weight-bold text-truncate card-title title-container">
-            <span class="title-text text-truncate">
-                {{ title }}
-            </span>
-
+                <h1 class="text-h5 title-text">
+                    <a :href="`/pathway?pathway=${encodeURIComponent(title)}`" @click.stop>  {{ title }}</a>
+                </h1>
             <div class="header">
                 <v-row>
                     <v-col>
@@ -215,8 +214,17 @@ export default {
             padding-right: 20px;
             display: inline-block;
             width: 100%;
-            font-size: 14pt;
+            font-size: 16pt;
             flex-shrink: 0;
+        }
+
+        .title-text a{
+            padding-right: 20px;
+            display: inline;
+            font-size: 16pt;
+            flex-shrink: 0;
+            text-decoration: underline;
+            color: inherit;
         }
 
         .menu-icon {
