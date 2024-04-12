@@ -76,6 +76,19 @@
                         Explore courses
                     </v-btn>
                 </div>
+                <div class="homepage-btn">
+                    <v-btn
+                        x-large
+                        block
+                        color="primary"
+                        :to="{ name: 'search' }"
+                    >
+                        <v-icon left dark>
+                            mdi-book-open-variant
+                        </v-icon>
+                        Search
+                    </v-btn>
+                </div>
                 <!-- <div class="homepage-btn">
                      <v-btn
                      x-large
