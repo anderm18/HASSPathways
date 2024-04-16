@@ -15,10 +15,10 @@
                     Courses
                 </span>
                 <div>
-                    <CourseTableCourse
+                    <SearchPageCourseDisplay
                         v-for="item in filteredCourses"
                         :key="item.name"
-                        :course="temp(item)"
+                        :courseName="item.name"
                         :desc="true"
                         :show-desc="true"
                         :hover="false"
@@ -47,14 +47,14 @@
     
 <script>
 import Breadcrumbs from '../../components/Breadcrumbs'
-import CourseTableCourse from '../../components/CourseTableCourse'
 import PathwayTableCourse from '../../components/PathwayTableCourse'
+import SearchPageCourseDisplay from '../../components/SearchPageCourseDisplay.vue'
 import breadcrumbs from '../../data/breadcrumbs.js'
 
 export default {
     components: {
         Breadcrumbs,
-        CourseTableCourse,
+        SearchPageCourseDisplay,
         PathwayTableCourse
     },
     props: {
@@ -257,7 +257,7 @@ export default {
         temp(item) {
             item['hasData'] = true;
             return item;
-        }
+        },
     }
 }
 </script>
