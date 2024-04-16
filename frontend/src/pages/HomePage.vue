@@ -9,6 +9,11 @@
                 Here you can explore the different pathways RPI has to offer. To get started choose from on of the options below and start exploring your options!
             </p>
             <v-divider class="my-4" />
+            <div class="homepage-search-container">
+                <i class="fa fa-search"></i>
+                <input type="text" v-model="searchQuery" @keyup.enter="handleSearch(searchQuery)" placeholder="Search Courses/Pathways" class="search-input">
+                <button @click="handleSearch(searchQuery)" class="search-button">Search</button>
+            </div>
             <div class="btn-container">
                 <div class="homepage-btn">
                     <v-btn
@@ -103,16 +108,39 @@ export default {
     },
     data() {
         return {
-            breadcrumbs: breadcrumbs.home
+            breadcrumbs: breadcrumbs.home,      
+            searchQuery: '',
+
         }
-    }
+    },
+    methods: {
+        handleSearch(searchQuery) {      
+            this.$router.push({ name: 'search', params: { searchQuery } });
+        },
+    },
 }
 </script>
 
 <style scoped>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+    
+#search-button i {
+  color: #555;
+}
  .homepage-btn {
      width: 350px;
      height: 50px;
+ }
+ .homepage-search-container {
+     padding: 10px 0;
+     display: grid;
+     justify-items: center;
+     align-items: center;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     grid-gap: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
  }
  .btn-container {
      padding: 10px 0;
@@ -125,4 +153,27 @@ export default {
      flex-wrap: wrap;
      justify-content: center;
  }
+    .search-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 600px; /* Adjust width as needed */
+    color:inherit
+    }
+.search-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff; /* Blue color, you can change this */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px; /* Add some spacing between input and button */
+}
+
+/* Add hover effect */
+.search-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
 </style>
