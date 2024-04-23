@@ -38,6 +38,7 @@ https://docs.google.com/spreadsheets/d/1w6BNcxYCE54pvCJJWHiEoE9CiMjRrVNKeUArV97q
 - Once everything is installed (ignore warnings), type `npm run serve`.
 - Visit the specified website the console spits out.
 - Note you can use `npm run lint` to fix some warnings that are present.
+- Note If using Windows we recommend you use Powershell over WSL
 
 
 #### Backend Setup
@@ -53,13 +54,3 @@ https://docs.google.com/spreadsheets/d/1w6BNcxYCE54pvCJJWHiEoE9CiMjRrVNKeUArV97q
 
 -- To access our hosted AWS resources, please contact a Contributor. The code reflected here is what we are hosting currently, just without our Security Keys.
 
-#### Branches/Pull Requests (old)
-Outdated as of 8/14.
-<s>
-To maintain an individual's credibility towards this project and order, we'll be using branches and pull requests. Branches will separate our work from one another preventing each other from overwriting someone's work. Pull requests is more of a formaility before it goes to production. With an active pull request, it tells the other developers part of the team that a feature/issue has been newly created/resolved. Pull requests will be handled by @nishi7409
-
-The ideal format for a branch name in this project is `issueNumber-&-issueNumber/FirstName`
-For example, a possible branch name would be called `3-&-16/John`. You'd base your branch off the `all-frontend` or `all-backend` branch depending on what *stack* (frontend or backend) issue you've been assigned. All issues are created with a label assigned to them (if one hasn't been labeled, let the project leader know ASAP).
-
-When you're completely done with your issues that have been assigned to you, push to your specific branch then create a pull request to the your main-stack's branch (`all-frontend` or `all-backend`). If the pull request is approved, you should expect to see your commits made to your stack's main branch **and** your changes should be out on the live production page.
-</s>
