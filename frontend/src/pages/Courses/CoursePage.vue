@@ -13,6 +13,11 @@
                 <a :href="`/pathway?pathway=${encodeURIComponent(item.name)}`" @click.stop>  {{ item.name }}</a>
             </li>
         </ul>
+      <div class="header">
+        <h2>Quatalog:</h2>
+        <a :href="`https://quatalog.com/courses/${course.subj}-${course.ID}`">This Courses Quatalog Entry (Contains more detailed course information)</a>
+      </div>
+
         <br>
         <template v-if="course.professors.length !== 0">
             <h2>Professors:</h2>
