@@ -13,9 +13,9 @@
                 <a :href="`/pathway?pathway=${encodeURIComponent(item.name)}`" @click.stop>  {{ item.name }}</a>
             </li>
         </ul>
-      <div class="header">
-        <h2>Quatalog:</h2>
-        <a :href="`https://quatalog.com/courses/${course.subj}-${course.ID}`">This Courses Quatalog Entry (Contains more detailed course information)</a>
+      <div class="header quatalog-header">
+        <h4>Quatalog (Contains more detailed course information):</h4>
+        <a :href="`https://quatalog.com/courses/${course.subj}-${course.ID}`">Quatalog</a>
       </div>
 
         <br>
@@ -282,6 +282,9 @@ export default {
         display: flex;
         flex-wrap: wrap;
     }
+ .quatalog-header {
+  padding-top: 20px;
+ }
 
     .title-text a{
             padding-right: 20px;
@@ -290,3 +293,5 @@ export default {
             flex-shrink: 0;
         }
 </style>
+
+

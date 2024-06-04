@@ -9,7 +9,8 @@
                 Here you can explore the different pathways RPI has to offer. To get started choose from on of the options below and start exploring your options!
             </p>
             <v-divider class="my-4" />
-            <div class="homepage-search-container">
+
+            <div class="homepage-search-container" v-if="featureFlags.searchBar" >
                 <i class="fa fa-search"></i>
                 <input type="text" v-model="searchQuery" @keyup.enter="handleSearch(searchQuery)" placeholder="Search Courses/Pathways" class="search-input">
                 <button @click="handleSearch(searchQuery)" class="search-button">Search</button>
@@ -110,7 +111,9 @@ export default {
         return {
             breadcrumbs: breadcrumbs.home,      
             searchQuery: '',
-
+            featureFlags: {
+              searchBar: false,
+            }
         }
     },
     methods: {
