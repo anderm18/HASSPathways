@@ -10,13 +10,14 @@ This project was developed to help students navigate through Rensselaer Polytech
 
 # Administrator Information
 #### Admin Portal
-(NOT LIVE AS OF 8/14)
+(NOT LIVE AS OF 6/4/2024)
+<s>
 1. Go to www.hasspathways.com
 2. Navigate to the Admin portal from home page.
 3. Log in using RPI RCS login through shibboleth.
 4. Any changes you make will be sent to the backend and later deployed.
 
-<s>
+
     
 #### Data Sheet
 https://docs.google.com/spreadsheets/d/1w6BNcxYCE54pvCJJWHiEoE9CiMjRrVNKeUArV97qN8w/edit?usp=sharing
@@ -42,6 +43,7 @@ https://docs.google.com/spreadsheets/d/1w6BNcxYCE54pvCJJWHiEoE9CiMjRrVNKeUArV97q
 
 
 #### Backend Setup
+(NOT LIVE AS OF 6/4/2024)
 - Clone the Repository to your computer
 - Navigate to \backend
 - Install Python3.7 or above (either directly or through a distribution like Anaconda)
