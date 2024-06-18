@@ -8,6 +8,15 @@ import os
 
 mapping = {"Requirements" : "remaining_header"}
 
+# input: course code (str) in form SUBJ #### (e.g.  CSCI 1100)
+# output: course name (str) (e.g. Introduction to Computer Science)
+def search_for_name(course_code: str) -> str:
+    subj, code = course_code.split(" ")
+    link = "https://catalog.rpi.edu/search_advanced.php?cur_cat_oid=26&ecpage=1&cpage=1&ppage=1&pcpage=1&spage=1&tpage=1&search_database=Search&filter%5Bkeyword%5D={}+{}&filter%5Bexact_match%5D=1&filter%5B3%5D=1&filter%5B31%5D=1#".format(subj, code)
+    soup = bs(requests.get(link).content, "html.parser")
+    tag = soup.find("a", attrs={"aria-expanded" : "false"})
+    return tag.text.split("-")[1].strip()
+
 
 # input: none
 # output: All of the pathway links in a list, to be processed.
@@ -107,10 +116,12 @@ def scrape_link(link: str) -> dict[str: list[str]]:
             for tag in p_tags:
                 text_list.append(" ".join((str(tag.text.strip()).replace(u"\xa0", " ").replace(u"\n", " ")).split()))
                 links = tag.find("a")
+                if (subtitle == "Compatible minor:"):
+                    continue
                 if links != None:
                     for l in links:
                         course_ids.append(l.text)
-                        course_names.append("")
+                        course_names.append(search_for_name(l.text))
             if "Compatible minor" in el.find("h2").text:
                 current["minors"] = text_list
             else:
@@ -142,6 +153,8 @@ def scrape_link(link: str) -> dict[str: list[str]]:
             for adhoc_el in adhoc:
                 to_split = str(adhoc_el.text)
                 if "-" not in to_split:
+                    if (len(to_split) < 9):
+                        continue
                     split = to_split.split()
                     course_id_temp = " ".join(split[0:2])
                     rest_joined = " ".join(split[2:])
@@ -159,7 +172,7 @@ def scrape_link(link: str) -> dict[str: list[str]]:
     return result
     
 
-def json_builder(pathways):
+def json_builder(pathways) -> dict[str: dict]:
     final = dict()
     classifications = dict()
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -167,6 +180,9 @@ def json_builder(pathways):
         classifications = json.load(f)
     for i in classifications.keys():
         pathway_name = i + " Pathway"
+        if pathway_name not in pathways.keys():
+            continue
+        
         final[i] = dict()
         final[i]["name"] = i
         final[i]["description"] = pathways[pathway_name]["description"]
@@ -177,7 +193,6 @@ def json_builder(pathways):
         if "Remaining" in classifications[i].keys():
             final[i]["Remaining"] = dict()
             for j in classifications[i]["Remaining"]:
-                print(pathways[pathway_name].keys())
                 if "course_ids" in pathways[pathway_name][j].keys() and "course_names" in pathways[pathway_name][j].keys():
                     course_names = pathways[pathway_name][j]["course_names"]
                     course_ids = pathways[pathway_name][j]["course_ids"]
@@ -187,8 +202,6 @@ def json_builder(pathways):
             final[i]["minor"] = []
             
             for j in classifications[i]["minor"]:
-                print(pathways[pathway_name][j])
-                print(j)
                 final[i]["minor"] += pathways[pathway_name][j]["minors"]
         
         if "Required" in classifications[i].keys():
@@ -198,7 +211,9 @@ def json_builder(pathways):
                     course_names = pathways[pathway_name][j]["course_names"]
                     course_ids = pathways[pathway_name][j]["course_ids"]
                     for x in range(len(course_names)):
-                        final[i]["Required"][course_names[x]] = course_ids[x]
+                        if course_names[x] not in final[i]["Required"]:
+                            final[i]["Required"][course_names[x]] = course_ids[x]
+                    
     
         if "One Of0" in classifications[i].keys():
             final[i]["One Of0"] = dict()
@@ -227,25 +242,37 @@ def json_builder(pathways):
                     for x in range(len(course_names)):
                         final[i]["One Of2"][course_names[x]] = course_ids[x]
 
+    
+    return final
+
+
+def test_one(link):
+    pathways = dict()
+    temp = scrape_link(link)
+    pathways[temp["title"]] = temp
+    final = json_builder(pathways)
     out = json.dumps(final, indent= 4)
     print(out)
+    return
 
+def scrape_all(location):
+    links = link_finder()
+    pathways = dict()
+    for i in links:
+        temp = scrape_link(i)
+        pathways[temp["title"]] = temp
+
+    final = json_builder(pathways)
+    out = json.dumps(final, indent= 4)
+    with open(location, 'w') as f:
+        f.write(out)
+    return
     
     
+if "__name__" == "__main__":
+    scrape_all()
 
 
 
-links = link_finder()
-pathways = dict()
-for i in links:
-    temp = scrape_link(i)
-    pathways[temp["title"]] = temp
-
-json_builder(pathways)
-#out = json.dumps(pathways, indent= 4)
-#print(out)  
-
-
-
-
-#scrape_link("https://catalog.rpi.edu/preview_program.php?catoid=26&poid=7615&returnto=669")
+scrape_all("pathways_new.json")
+#print(search_for_name("CSCI 1100"))

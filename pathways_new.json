@@ -1,0 +1,680 @@
+{
+    "Cognitive Science": {
+        "name": "Cognitive Science",
+        "description": "Discover Cognitive Science: a young but fast-growing field focused on the study of the mind from the perspectives of philosophy, psychology, neuroscience, linguistics, and artifical intellegence. This pathway will introduce students to the major ideas and theories from these areas, as they relate to the study of mind and intellegence.",
+        "remaining_header": "To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS (INQR) courses listed below to this pathway. Any 2000, or 4000-level COGS course acceptable; excluding all Independent Studies (2940/4940) and Undergraduate Research Projects (2941/4941). COGS 2120 is a required course for this pathway.",
+        "Remaining": {
+            "Introduction to Linguistics": "COGS 2340",
+            "Cognitive Modeling": "COGS 4210",
+            "Animal Cognition and Interaction with Humans": "COGS 4220",
+            "Introduction to Cognitive Neuroscience": "COGS 4330",
+            "The Linguistics of Computational Linguistics": "COGS 4340",
+            "Behavioral Neuroscience": "COGS 4360",
+            "Programming for Cognitive Science and Artificial Intelligence": "COGS 4410",
+            "Learning and Advanced Game AI": "COGS 4430",
+            "Game AI": "COGS 4420",
+            "Sensibilities": "COGS 4440",
+            "Cross-linguistic Perspectives": "COGS 4560",
+            "Cognition and the Brain": "COGS 4600",
+            "Stress and the Brain": "COGS 4610",
+            "Intelligent Virtual Agents": "COGS 4640",
+            "Hormones, Brain, and Behavior": "COGS 4700",
+            "Advanced Topics in Linguistics": "COGS 4780",
+            "Language-Endowed Intelligent Agents": "COGS 4880",
+            "Minds and Machines": "INQR 1140",
+            "Are Humans Rational?": "INQR 1235",
+            "Cognitive Psychology": "PSYC 4370",
+            "Sensation and Perception": "PSYC 4410",
+            "AI in the Information Age": "INQR 196X"
+        },
+        "minor": [
+            "Cognitive Science Minor",
+            "Cognitive Science of Artificial Intelligence Minor"
+        ],
+        "Required": {
+            "Introduction to Cognitive Science": "COGS 2120"
+        }
+    },
+    "Design, Innovation, and Society": {
+        "name": "Design, Innovation, and Society",
+        "description": "The pathway in Design, Innovation, and Society (DIS) provides creative, socially conscious students deep context for a broad education in design and innovation. Students take a sequence of studio-based courses that address real-world social and environmental challenges. To complete this integrative pathway, student must choose 12 credits as described:",
+        "Remaining": {
+            "Design and Innovation Studio I": "INQR 1610",
+            "Design and Innovation Studio II": "STSO 2610",
+            "Design and Innovation Studio III": "STSO 2020"
+        }
+    },
+    "Economics": {
+        "name": "Economics",
+        "description": "Economics is the study of human behavior, incentives, markets, and governments. Students learn the fundamental models of data analytics of decision-making by individuals and firms, market dynamics, policy-making, globalization, financial economics, and more. Students completing the 12-credit Economics Pathway have the option to take one additional Economics course (4 additional credits) to earn an Economics minor. Interested students should examine the list of compatible minors below and pay careful attention to the required courses of these programs before making their course selections for this pathway.",
+        "Remaining": {
+            "Intermediate Microeconomic Theory": "ECON 2010",
+            "Intermediate Macroeconomic Theory": "ECON 2020",
+            "Economic Data Analysis and Applications": "ECON 2100",
+            "Applied Microeconomics and Public Policy": "ECON 4010",
+            "Economics of Innovation and New Technologies": "ECON 4110",
+            "Mathematical Methods in Economics": "ECON 4120",
+            "Money and Banking": "ECON 4130",
+            "Structure of Industry:  Competition, Innovation, Entrepreneurship, Policy": "ECON 4140",
+            "Economics of Government Regulation and Firm Strategy": "ECON 4150",
+            "Public Finance": "ECON 4160",
+            "Health Economics and Policy": "ECON 4170",
+            "Development of Economic Thought": "ECON 4180",
+            "International Economics and Globalization": "ECON 4190",
+            "Open Economy Macroeconomics": "ECON 4200",
+            "Cost-Benefit Analysis": "ECON 4210",
+            "Applied Game Theory": "ECON 4220",
+            "Environmental Economics": "ECON 4230",
+            "Natural Resource Economics": "ECON 4240",
+            "Economy, Technology, and Sustainability": "ECON 4250",
+            "Environmental and Resource Economics": "ECON 4260",
+            "Behavioral Economics": "ECON 4270",
+            "Econometric Methods for Big Data": "ECON 4280",
+            "Economics of Biotech and Medical Innovations": "ECON 4290",
+            "Law and Economics": "ECON 4310",
+            "Economic Models of Decision-Making": "ECON 4320",
+            "Economics of Financial Institutions and Markets": "ECON 4330",
+            "Behavioral Financial Economics": "ECON 4340",
+            "Microeconomics of Decision-Making": "ECON 4350",
+            "Experimental Economics": "ECON 4360",
+            "Globalization and the Environment": "ECON 4370",
+            "Economics of Labor Markets and Discrimination": "ECON 4380",
+            "Economics of Growth & Innovation": "ECON 4430",
+            "Applied Economic and Financial Forecasting": "ECON 4520",
+            "Econometrics": "ECON 4570",
+            "Data Analysis in Economics and Finance": "ECON 4580",
+            "Advanced Data Analytics & Policy Evaluation": "ECON 4590",
+            "Topics in Economics": "ECON 496X"
+        },
+        "minor": [
+            "Economics Minor",
+            "Economics of Banking and Finance Minor",
+            "Economics of Healthcare Markets Minor",
+            "Economics of Quantitative Modeling Minor",
+            "Economics of Technology and Innovation Minor"
+        ],
+        "One Of0": {
+            "Principles of Economics": "INQR 1200"
+        }
+    },
+    "Ethics, Integrity, and Social Responsibility": {
+        "name": "Ethics, Integrity, and Social Responsibility",
+        "description": "In this Pathway, students analyze many aspects of the complex relationship between ethics and areas in science, technology, and engineering. These conversations are critical to ensure the ethical and accessible use of technology and to allow scientists and engineers to think critically and make informed decisions on personal, professional, and public policy levels.",
+        "Remaining": {
+            "Art, Community, and Technology": "ARTS 4250",
+            "Eco Chic: Living Art": "ARTS 4240",
+            "Hactivism": "ARTS 4560",
+            "Science, Technology, and Society": "STSO 1100",
+            "Minds and Machines": "INQR 1140",
+            "The Genome and You": "INQR 1150",
+            "Science and Scientific Misconduct": "INQR 1160",
+            "Great Ideas in Philosophy": "INQR 1165",
+            "Designing Climate Justice": "INQR 1250",
+            "Law, Values, and Public Policy: Perspectives on Science and Technology": "INQR 1350",
+            "Introduction to Philosophy": "PHIL 1110",
+            "Ethics": "PHIL 4240",
+            "Environmental Philosophy": "STSO 4340",
+            "Bioethics": "STSO 4250",
+            "Medicine, Culture, and Society": "STSO 4400",
+            "IGD: Imagined Futures/Realties Credit Hours: 4": "INQR 296X",
+            "Environmental Ethics Credit Hours: 4": "PHIL 296X",
+            "Ethics of AI Credit Hours: 4": "PHIL 496X"
+        }
+    },
+    "Extent and Limits of Rationality": {
+        "name": "Extent and Limits of Rationality",
+        "description": "People are not always as rational as they would like to think and are subject to a variety of cognitive and social biases. People also have the power to correct for these biases, and to do good and constructive work. How can critical thinking be used constructively? How can people learn from their past mistakes? How can social institutions and policies be set up to ensure that wise decisions are made to create a world that lasts into the extended future?",
+        "Remaining": {
+            "Introduction to Cognitive Science": "COGS 2120",
+            "Communication Theory and Practice": "COMM 2520",
+            "Behavioral Economics": "ECON 4270",
+            "Applied Game Theory": "ECON 4220",
+            "War and Society": "INQR 1510",
+            "War and Technology: Past, Present, and Future": "INQR 1570",
+            "The Art of Listening": "INQR 1180",
+            "Principles of Economics": "INQR 1200",
+            "Are Humans Rational?": "INQR 1235",
+            "Minds and Machines": "INQR 1140",
+            "Philosophy of Science": "PHIL 4130",
+            "Critical Thinking": "PSYC 2100",
+            "Introduction to Logic": "PHIL 2140",
+            "Cognitive Psychology": "PSYC 4370",
+            "History of Science and Technology": "STSO 4530",
+            "Proposing and Persuading": "WRIT 4550",
+            "Strategic Writing": "WRIT 2110",
+            "Speech Communication": "WRIT 2340",
+            "Intermediate Formal Logic & AI": "PHIL 496X",
+            "Moral Dilemmas Credit Hours: 4": "PHIL 296X"
+        }
+    },
+    "Game Studies": {
+        "name": "Game Studies",
+        "description": "This pathway explores the design, creation, and analysis of games. Students completing this pathway will develop depth in creative and critical thinking, technological proficiency, and multicultural awareness. This pathway is restricted to students in the Game and Simulation Arts and Sciences (GSAS) major.",
+        "Remaining": {
+            "History and Culture of Games": "GSAS 1600",
+            "Introduction to Game Design": "GSAS 2510",
+            "Introduction to Game Storytelling": "GSAS 2520",
+            "Introduction to Game Programming": "GSAS 2540",
+            "Game Development I": "GSAS 4520",
+            "Game Development II": "GSAS 4540",
+            "Experimental Game Design": "GSAS 4510"
+        }
+    },
+    "Global Languages and Cultures": {
+        "name": "Global Languages and Cultures",
+        "description": "This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures. Students who select this pathway must have all courses that are part of the pathway be in the same foreign language. These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing). After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor (*see note below).",
+        "Remaining": {
+            "Social Media: East & West": "COMM 4535",
+            "Language and Power": "INQR 1492",
+            "Chinese I": "LANG 1410",
+            "Chinese II": "LANG 2410",
+            "Chinese III": "LANG 4420",
+            "Chinese IV": "LANG 4430",
+            "Chinese Calligraphy": "LANG 4455",
+            "Chinese V": "LANG 4470",
+            "Topics in Language": "LANG 296X",
+            "Chinese Language and Culture in Film": "LANG 496X"
+        },
+        "minor": [
+            "Chinese Language Minor"
+        ]
+    },
+    "Graphic and Interactive Media Design": {
+        "name": "Graphic and Interactive Media Design",
+        "description": "This pathway intergrates the theory and practice of graphic and interactive media design in print and digital media. Students are prepared to use creative and critical thinking to solve visual communication problems in diverse contexts, reaching target audiences with words, symbols, and images. Offerings in integrative design also prepare students for creating forms of multimedia communication and data representation.",
+        "remaining_header": "To complete this intergrative pathwayt, students must choose a minimum of 12 credits as from the course list below. For the pathway, students may freely combine courses from both \u2018Graphic Design\u2019 and \u2018Interactive Media Design\u2019 areas but should refer to the Minor requirement if they plan to pursue of the compatible minors listed below. *Note that many of the 4000 level courses require COMM 2660 as a prerequisite.",
+        "Remaining": {
+            "Typography": "COMM 2570",
+            "Introduction to Graphic Design": "COMM 2660",
+            "Visual Design: Theory and Application": "COMM 4460",
+            "Information Design": "COMM 4470",
+            "Brand Identity Design": "COMM 4730",
+            "2D Motion Graphics": "COMM 4970",
+            "Life in Color": "INQR 1562",
+            "Visual Poetics and Narrative": "COMM 4320",
+            "Foundations of HCI Usability": "COMM 4420",
+            "User Design Experience": "COMM 4770",
+            "Interactive Narrative": "COMM 4780",
+            "Interactive Data Visualization": "COMM 4880",
+            "Interface Design: Hypermedia Theory and Application Credit Hours: 4": "COMM 496X"
+        },
+        "minor": [
+            "Graphic Design Minor",
+            "Interactive Media/Data Design Minor"
+        ]
+    },
+    "History": {
+        "name": "History",
+        "description": "The pathway designed for students interested in U.S. and world history. Courses all intersect in that they offer historical perspectives and approaches to thinking about various topics: from music, to medicine, to broader historical surveys (such as American History).",
+        "remaining_header": "To fulfill this pathway, students must complete 12 credit hours of coursework from the list below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students should pay careful attention to prerequisites of classes above the 1000-level. We recommend but do not require that students use their required HASS Inquiry (INQR) course to begin to fulfill this Pathway. Students who are interested in undertaking the compatible minor in History should also pay careful attention to the required courses of that program before making their course selections for this pathway. ",
+        "Remaining": {
+            "Art History": "ARTS 1050",
+            "Histories of Western Music": "ARTS 2500",
+            "Histories of Jazz and Improvised Music": "ARTS 2510",
+            "History of Animation": "INQR 1170",
+            "Race and Film in U.S. Culture and History": "INQR 1300",
+            "A Century of Environmental Thought": "INQR 1320",
+            "War and Technology: Past, Present, and Future": "INQR 1570",
+            "Revolutions in Comparative Perspective": "INQR 1580",
+            "The American Dream": "INQR 1776",
+            "American History": "STSO 2500",
+            "History of Medicine": "STSO 4420",
+            "Drugs in History": "STSO 4430",
+            "History of Mental Health": "STSO 4440",
+            "History of American Technology": "STSO 4510",
+            "History of Science and Technology": "STSO 4530",
+            "AI and Computing: Past, present, and future Credit Hours: 4": "INQR 196X",
+            "History of Race, Science, and Medicine Credit Hours: 4": "STSO 496X"
+        },
+        "minor": [
+            "History Minor"
+        ]
+    },
+    "Information Technology and Web Sciences": {
+        "name": "Information Technology and Web Sciences",
+        "description": "The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
+        "Remaining": {
+            "The Multimedia Century": "ARTS 2540",
+            "Introduction to Cognitive Science": "COGS 2120",
+            "Communication Theory and Practice": "COMM 2520",
+            "Introduction to Graphic Design": "COMM 2660",
+            "Foundations of HCI Usability": "COMM 4420",
+            "Principles of Economics": "INQR 1200",
+            "Critical Thinking": "PHIL 2100",
+            "Introduction to Logic": "PHIL 2140",
+            "Introduction to Psychological Science": "PSYC 1200",
+            "Science, Technology, and Society": "STSO 1100",
+            "Design, Culture, and Society": "STSO 2210",
+            "Strategic Writing": "WRIT 2110",
+            "Speech Communication": "WRIT 2340"
+        },
+        "minor": [
+            "Information Technology and Web Science Minor"
+        ],
+        "Required": {
+            "IT and Society": "INQR 1220",
+            "Introduction to Human Computer Interaction": "ITWS 2210"
+        }
+    },
+    "Media and Culture": {
+        "name": "Media and Culture",
+        "description": "This pathway examines different forms of expression and their cultural contexts in a variety of media, including film, television, photography, and new media. Its components will enhance creative and critical thinking, communication practices, and awareness of cultural and individual identities. The focus on cultural and media literacy will improve the career readiness and social awareness of those in any program at RPI. To complete this integrative pathway, students must choose a minimum of 12 credits as from the course list below; only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
+        "Remaining": {
+            "Documentary Film": "COMM 2440",
+            "Communication Theory and Practice": "COMM 2520",
+            "Superheroes in the Classroom": "COMM 2616",
+            "Critical Television": "COMM 2750",
+            "Social Media & Strategic Communication": "COMM 4188",
+            "Health Communication in Practice": "COMM 4288",
+            "Post-Factual Media": "COMM 4530",
+            "Social Media: East & West": "COMM 4535",
+            "Visual Culture": "COMM 4540",
+            "Religion, Politics, & Media": "COMM 4550",
+            "Advertising and Culture": "COMM 4580",
+            "Language and Power": "INQR 1492",
+            "Media and Society": "INQR 1560",
+            "The Film Experience": "LITR 2410",
+            "Speech Communication": "WRIT 2340",
+            "Adaptations in Games and Media Credit Hours: 4": "COMM 496X",
+            "Visual Essay in Pop Culture Credit Hours: 4": "WRIT 496X",
+            "News, Media, Culture and Politics Credit Hours: 4": "INQR 196X"
+        },
+        "minor": [
+            "Media and Culture Minor"
+        ]
+    },
+    "Music and Sound": {
+        "name": "Music and Sound",
+        "description": "In this pathway, students are offered a full range of opportunies to perform, compose, and record music; to program and develop novel music technologies; to produce and design sound for screen media; and to situate music historically and culturally across multiple genres.",
+        "remaining_header": "To complete this integrative pathway, students must choose a minimum of 12 credits as described. Only four (4) credits from the HASS inquiry (INQR) courses listed below can be applied to the pathway. The courses in the music pathway are organized in categories: Music and Culture, Composition and Production, and Performance. Students may concentrate their selection of courses within a single catagory, or they may combine courses between any of the three catagories.",
+        "Remaining": {
+            "Deep Listening": "ARTS 2180",
+            "Histories of Western Music": "ARTS 2500",
+            "Histories of Jazz and Improvised Music": "ARTS 2510",
+            "World Music": "ARTS 2520",
+            "The Multimedia Century": "ARTS 2540",
+            "Popular Music and Society": "ARTS 2550",
+            "Game Sound and Musical Play": "GSAS 2560",
+            "Music, Sound, & the Environment": "ARTS 2570",
+            "Topics in Deep Listening": "ARTS 4180",
+            "Music, Sound & Screen Media": "GSAS 4440",
+            "Topics in the History and Analysis of Music": "ARTS 4500",
+            "Interdisciplinary Research Seminar": "ARTS 4880",
+            "The Art of Listening": "INQR 1180",
+            "Fundamentals of Music and Sound": "ARTS 1380",
+            "Music and Technology I": "ARTS 2020",
+            "Music and Sound I": "ARTS 2380",
+            "Designing Musical Games": "ARTS 2610",
+            "Sound Recording and Production I": "ARTS 2700",
+            "Music and Technology II": "ARTS 4160",
+            "Music and Sound II": "ARTS 4380",
+            "Composition Seminar": "ARTS 4390",
+            "Ensemble Nonlinear": "ARTS 2600",
+            "Sound Recording and Production II": "ARTS 4700",
+            "Songwriting Workshop": "INQR 1700",
+            "Art of Songwriting Credit Hours: 4": "ARTS 296X",
+            "Contemporary Improvisation Ensemble": "ARTS 2080",
+            "Rensselaer Orchestra": "ARTS 2300",
+            "Rensselaer Concert Choir": "ARTS 2310",
+            "Chamber Music Ensemble": "ARTS 2350",
+            "Private Music Lessons": "ARTS 2750",
+            "Wind Symphony (1 credit; course may be repeated multiple times for credit)": "ARTS 296X"
+        },
+        "minor": [
+            "Music"
+        ]
+    },
+    "Narrative and Storytelling": {
+        "name": "Narrative and Storytelling",
+        "description": "The Narrative and Storytelling Pathway offers discussion-oriented courses across a range of literary genres and themes, with a choice of emphasis on either literature, creative writing, or both. Students will learn to read and write literary art critically and creatively, with clarity and imagination, and with sensitivity to multi-cultural expressions of diversity.",
+        "Remaining": {
+            "Superheroes in the Classroom": "COMM 2616",
+            "Critical Television": "COMM 2750",
+            "Fiction: From Film to the Internet": "INQR 1550",
+            "Introduction to Literature": "LITR 2110",
+            "The Film Experience": "LITR 2410",
+            "Science and Fiction": "LITR 4150",
+            "Irish Literature": "LITR 4230",
+            "Women Writers": "LITR 4770",
+            "Multicultural American Literature": "LITR 4880",
+            "Writing in Context": "WRIT 1110",
+            "Introduction to Creative Writing": "WRIT 1769",
+            "Creative Writing:  Short Story": "WRIT 2330",
+            "Adaptations in Games and Media": "COMM 496X",
+            "Visual Essay in Pop Culture": "WRIT 496X"
+        }
+    },
+    "Pre-Health": {
+        "name": "Pre-Health",
+        "description": "The Pre-Health pathway is designed for students who are planning to apply to medical school or pursuing other health-related careers. It includes coursework that is required as part of the medical school application process.",
+        "Required": {
+            "Introduction to Psychological Science": "PSYC 1200",
+            "Sociology": "STSO 2520"
+        },
+        "One Of0": {
+            "Communication Theory and Practice": "COMM 2520",
+            "Visual Design: Theory and Application": "COMM 4460",
+            "Writing in Context": "WRIT 1110",
+            "Strategic Writing": "WRIT 2110",
+            "Speech Communication": "WRIT 2340",
+            "Writing and Response": "WRIT 4380",
+            "Research Writing": "WRIT 4410",
+            "Proposing and Persuading": "WRIT 4550",
+            "level COMM and WRIT courses can be approved pending review by the HASS Associate Dean for Academic Affairs.": "*Additional 2000 and 4000"
+        }
+    },
+    "Philosophy and Logic": {
+        "name": "Philosophy and Logic",
+        "description": "In this pathway, students will learn to reason more precisley, think more critically, and ask more penetrating and foundational questions about enduring and contemporary problems in ethics, science, technology, religion, and politics including some of the biggest challenges that humanity currently faces.",
+        "remaining_header": "To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS Inquiry (INQR) courses listed below to this pathway. Choose remaining credits from any 2000 or 4000-level PHIL courses; excluding all Independent Studies (2940) and Undergraduate Research Projects (2941).",
+        "Remaining": {
+            "Minds and Machines": "INQR 1140",
+            "The Genome and You": "INQR 1150",
+            "Science and Scientific Misconduct": "INQR 1160",
+            "Great Ideas in Philosophy": "INQR 1165",
+            "Are Humans Rational?": "INQR 1235",
+            "Introduction to Philosophy": "PHIL 1110",
+            "Critical Thinking": "PHIL 2100",
+            "Introduction to Logic": "PHIL 2140",
+            "Philosophy of Biology": "PHIL 2400",
+            "Ethics of Artificial Intellegence": "PHIL 2500",
+            "Introduction to Philosophy of Religion": "PHIL 2830",
+            "Philosophy of Science": "PHIL 4130",
+            "Intermediate Logic": "PHIL 4140",
+            "Ethics": "PHIL 4240",
+            "Philosophy of Artificial Intelligence": "PHIL 4260",
+            "Environmental Philosophy": "PHIL 4300",
+            "Scientific Revolutions": "PHIL 4310",
+            "Computability and Logic": "PHIL 4420",
+            "Metaphysics and Consciousness": "PHIL 4480",
+            "Bioethics": "PHIL 4500",
+            "Capstone Experience in Philosophy": "PHIL 4990",
+            "Topics in Philosophy": "PHIL 496X",
+            "Readings in Philosophy": "PHIL 494X"
+        },
+        "minor": [
+            "Philosophy Minor",
+            "Philosophy of Logic, Computation, and Mind Minor"
+        ]
+    },
+    "Psychological Science": {
+        "name": "Psychological Science",
+        "description": "The ability to understand and predict how people act and think is more important than ever in addressing many of the greatest challenges that we face as a society. In this pathway, students will learn how behavior and thought are influenced by cognitive, emotional, developmental, social, and environmental factors, and how to apply psychological principles.",
+        "Remaining": {
+            "Critical Thinking": "PSYC 2100",
+            "Research Methods and Statistics I": "PSYC 2310",
+            "Social Psychology": "PSYC 2730",
+            "Motivation and Performance": "PSYC 4110",
+            "Professional Development II: Leadership Theories": "PSYC 4170",
+            "Industrial and Organizational Psychology": "PSYC 4200",
+            "Animal Cognition and Interaction with Humans": "PSYC 4220",
+            "Research Methods and Statistics II": "PSYC 4310",
+            "Introduction to Cognitive Neuroscience": "PSYC 4330",
+            "Mathematical Methods in Psychological Science": "PSYC 4350",
+            "Behavioral Neuroscience": "PSYC 4360",
+            "Cognitive Psychology": "PSYC 4370",
+            "Sensation and Perception": "PSYC 4410",
+            "Psychology of Mindfulness": "PSYC 4430",
+            "Sensibilities": "PSYC 4440",
+            "Learning": "PSYC 4450",
+            "Drugs, Society, and Behavior": "PSYC 4500",
+            "Cognitive Modeling": "PSYC 4510",
+            "Cognition and the Brain": "PSYC 4600",
+            "Stress and the Brain": "PSYC 4610",
+            "Hormones, Brain, and Behavior": "PSYC 4700",
+            "Abnormal Psychology": "PSYC 4720",
+            "Positive Psychology": "PSYC 4730",
+            "Topics in Psychology": "PSYC 496X"
+        },
+        "minor": [
+            "Behavioral and Cognitive Neuroscience Minor",
+            "General Psychology Minor",
+            "Psychological Science Minor"
+        ],
+        "Required": {
+            "Introduction to Psychological Science": "PSYC 1200"
+        }
+    },
+    "Public Health": {
+        "name": "Public Health",
+        "description": "The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med track beyond the pre-health/pre-med pathway.",
+        "remaining_header": "To complete this integrative pathway, students must choose a minimum of 12 credits as described. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students who are interested in undertaking the compatible minor in Public Health should also pay careful attention to the required courses of that program before making their course selections for this pathway.",
+        "Remaining": {
+            "Stress and the Brain": "PSYC 4610",
+            "Hormones, Brain, and Behavior": "PSYC 4700",
+            "Health Communication in Practice": "COMM 4288",
+            "Science, Technology, and Society": "STSO 1100",
+            "The Genome and You": "INQR 1150",
+            "Introduction to Psychological Science": "PSYC 1200",
+            "Drugs, Society, and Behavior": "PSYC 4500",
+            "Sociology": "STSO 2520",
+            "Bioethics": "STSO 4250",
+            "Food, Farms, and Famine": "STSO 4260",
+            "Medicine, Culture, and Society": "STSO 4400",
+            "History of Medicine": "STSO 4420",
+            "Drugs in History": "STSO 4430",
+            "History of Mental Health": "STSO 4440",
+            "Gender, Science, and Technology": "STSO 4560",
+            "Politics: Epidemics and Pandemics Credit Hours: 4\nSTSO 496X - History or Race, Science, and Medicine Credit Hours: 4": "STSO 496X"
+        },
+        "minor": [
+            "Public Health Minor"
+        ]
+    },
+    "Science, Technology, and Society": {
+        "name": "Science, Technology, and Society",
+        "description": "The pathway in Science, Technology, and Society (STS) is designed for students broadly interested in the social and political dimensions of science, technology, engineering, and medicine. Students use political and social science methods to investigate scientific and technological developments.",
+        "remaining_header": "To fulfill this pathway, students must complete 12 credit hours in courses offered by the Department of Science & Technology Studies (courses with the STSO prefix, and the specific INQR courses listed below, but excluding credits from independent studies and URPs). Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students should pay careful attention to prerequisites of classes above the 1000-level. Students who are interested in undertaking the compatible minor and major in Science, Technology, and Society should also pay careful attention to the required courses of those programs before making their course selections for this pathway. We recommend (but do not require) that students use their HASS Inquiry course to begin to fulfill this Pathway. HASS Inquiry courses offered by the Department of Science and Technology Studies are the following:",
+        "Remaining": {
+            "Science, Technology, and Society": "STSO 1100",
+            "Nature/Society": "INQR 1110",
+            "IT and Society": "ITWS 1220",
+            "Sustainability Debates": "INQR 1240",
+            "Designing Climate Justice": "INQR 1250",
+            "A Century of Environmental Thought": "INQR 1320",
+            "Law, Values, and Public Policy: Perspectives on Science and Technology": "INQR 1350",
+            "War and Technology: Past, Present, and Future": "INQR 1570",
+            "Revolutions in Comparative Perspective": "INQR 1580",
+            "Design and Innovation Studio III": "STSO 2020",
+            "Investigating Society": "STSO 2100",
+            "Design, Culture, and Society": "STSO 2210",
+            "Environment and Society": "STSO 2300",
+            "American History": "STSO 2500",
+            "Sociology": "STSO 2520",
+            "Design and Innovation Studio II": "STSO 2610",
+            "Law & Society": "STSO 2700",
+            "Professional Development \u2013Technical Issues and Solutions": "STSO 4100",
+            "Engineering Ethics": "STSO 4210",
+            "Bioethics": "STSO 4250",
+            "Food, Farms, and Famine": "STSO 4260",
+            "Sustainability Education": "STSO 4280",
+            "Sustainability and STS Careers": "STSO 4300",
+            "Environmental Media & Data": "STSO 4320",
+            "Environmental Justice": "STSO 4330",
+            "Environmental Philosophy": "STSO 4340",
+            "Politics of Design": "STSO 4350",
+            "Medicine, Culture, and Society": "STSO 4400",
+            "History of Medicine": "STSO 4420",
+            "Drugs in History": "STSO 4430",
+            "History of Mental Health": "STSO 4440",
+            "Globalization and Development": "STSO 4500",
+            "History of American Technology": "STSO 4510",
+            "History of Science and Technology": "STSO 4530",
+            "Gender, Science, and Technology": "STSO 4560",
+            "Self-Organization in Science and Society": "STSO 4580",
+            "American Politics in Crisis": "STSO 4590",
+            "Design and Innovation Studio A": "STSO 4600",
+            "Design and Innovation Studio B": "STSO 4605",
+            "Design and Innovation  Studio C": "STSO 4610",
+            "Design and Innovation Senior Project": "STSO 4970",
+            "Research Design": "STSO 4980",
+            "STS and Sustainability Senior Project": "STSO 4990",
+            "Concepts in Science and Technology Studies": "STSO 6010",
+            "Technology Studies": "STSO 6040",
+            "Science and Technology Policy": "STSO 6100",
+            "Research Methods in STS": "STSO 6110",
+            "Advanced Research Methods": "STSO 6120",
+            "Science Studies": "STSO 6200",
+            "Environment and Social Theory": "STSO 6300",
+            "Environment and Health": "STSO 6400",
+            "History and Ethnography": "STSO 6580",
+            "AI and Computing": "INQR 1960"
+        },
+        "minor": [
+            "Science, Technology, and Society Minor"
+        ]
+    },
+    "Strategic Writing": {
+        "name": "Strategic Writing",
+        "description": "This pathway is designed to train versatile, critical, and self-possessed 21st-century communicators. Students who successfully complete this pathway will demonstrate the ability to make focused audience-appropriate arguments; communicate effectively across diverse rhetorical, socio-cultural, and disciplinary contexts; and respond creatively to the analytical demands involved with developing, arranging, and revising ideas and arguments.",
+        "Remaining": {
+            "Communication Theory and Practice": "COMM 2520",
+            "Social Media & Strategic Communication": "COMM 4188",
+            "Health Communication in Practice": "COMM 4288",
+            "Interactive Narrative": "COMM 4780",
+            "Writing in Context": "WRIT 1110",
+            "Strategic Writing": "WRIT 2110",
+            "Creative Writing:  Short Story": "WRIT 2330",
+            "Speech Communication": "WRIT 2340",
+            "Writing and Response": "WRIT 4380",
+            "Research Writing": "WRIT 4410",
+            "Proposing and Persuading": "WRIT 4550",
+            "Visual Essay in Pop Culture Credit Hours: 4": "WRIT 496X"
+        },
+        "minor": [
+            "Writing Minor",
+            "Strategic Communication Minor"
+        ]
+    },
+    "Sustainability Studies": {
+        "name": "Sustainability Studies",
+        "description": "The pathway in Sustainability focuses on the interactions between various systems - social, political, cultural, economic, technological and ecological - that undergird environmental sustainability. Students use interdisciplinary approaches to investigate environmental problems.",
+        "minor": [
+            "Sustainability Studies Minor"
+        ],
+        "Required": {
+            "Environment and Society": "STSO 2300"
+        },
+        "One Of0": {
+            "Nature/Society": "INQR 1110",
+            "Sustainability Debates": "INQR 1240",
+            "Designing Climate Justice": "INQR 1250",
+            "A Century of Environmental Thought": "INQR 1320",
+            "Science, Technology, and Society": "STSO 1100"
+        },
+        "One Of1": {
+            "Food, Farms, and Famine": "STSO 4260",
+            "Sustainability Education": "STSO 4280",
+            "Environmental Media & Data": "STSO 4320",
+            "Environmental Justice": "STSO 4330",
+            "Environmental Philosophy": "STSO 4340",
+            "Politics of Design": "STSO 4350",
+            "Globalization and Development": "STSO 4500",
+            "History of American Technology": "STSO 4510",
+            "Design and Innovation Studio A": "STSO 4600",
+            "Sustainable Energy Systems": "STSO 496X"
+        }
+    },
+    "Transfer Student Arts and Humanities": {
+        "name": "Transfer Student Arts and Humanities",
+        "description": "This pathway is intended for transfer students that enter with sophomore status or above and who have completed significant coursework within the arts and humanities to be applied toward a pathway. Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level: ARTS COMM GSAS IHSS LANG LITR PHIL STSO WRIT"
+    },
+    "Transfer Student Social Science": {
+        "name": "Transfer Student Social Science",
+        "description": "This pathway is intended for transfer students that enter with sophomore status or above and who have completed significant coursework within the social sciences to be applied toward a pathway. Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level. COGS ECON GSAS IHSS PSYC STSO"
+    },
+    "Visual and Media Arts": {
+        "name": "Visual and Media Arts",
+        "description": "In this pathway, students are offered a full range of opportunities to create artwork in visual, electronic, and experimental media; to situate contemporary art and visual culture historically and culturally; and to participate in activist and community-based art practices.",
+        "remaining_header": "To complete this integrative pathway, students must choose a minimum of 12 as described. Only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway.  The courses in the Visual and Media Arts pathway are organized in categories: Studio Art, Electronic Arts, Video, Social Practice and Hybrid Genres. Students may concentrate their selection of courses within a single catagory, or they may combine courses between any of the four catagories.",
+        "Remaining": {
+            "Art History": "ARTS 1050",
+            "Basic Drawing": "ARTS 1200",
+            "Radical Graphics/Screenprinting": "ARTS 2090",
+            "Intermediate Drawing": "ARTS 2200",
+            "Sculpture I": "ARTS 2210",
+            "Fundamentals of 2D Design": "ARTS 2220",
+            "The Multimedia Century": "ARTS 2540",
+            "Advanced Drawing": "ARTS 4200",
+            "Sculpture II": "ARTS 4210",
+            "Painting": "ARTS 4220",
+            "Life Drawing and Anatomy for Artists": "ARTS 4260",
+            "Digital Imaging": "ARTS 1020",
+            "Intermediate Digital Imaging": "ARTS 2040",
+            "2D Experimental Animation": "ARTS 2060",
+            "Graphic Storytelling": "ARTS 2070",
+            "3D Digital Modeling": "ARTS 2230",
+            "Sound Recording and Production I": "ARTS 2700",
+            "3D Visual Effects": "ARTS 4060",
+            "3D Animation": "ARTS 4070",
+            "Art and Code and Interactivity": "ARTS 4090",
+            "Advanced Digital Imaging": "ARTS 4860",
+            "History of Animation": "INQR 1170",
+            "Digital Filmmaking": "ARTS 1030",
+            "Intermediate Video": "ARTS 2010",
+            "Rethinking Documentary: Video Production": "ARTS 4040",
+            "Advanced Video Media Studio": "ARTS 4050",
+            "Music, Sound & Screen Media": "ARTS 4440",
+            "Writing and Directing for Video": "ARTS 4630",
+            "Behind the TV Screen": "INQR 1030",
+            "Documentary in the 21st Century: Identity Production": "INQR 1040",
+            "Race and Film in U.S. Culture and History": "INQR 1300",
+            "Deep Listening": "ARTS 2180",
+            "Biopunk: Arts Lab Practice": "ARTS 4120",
+            "Queer Ecologies": "ARTS 4140",
+            "Inflatable Sculpture": "ARTS 4230",
+            "Eco Chic: Living Art": "ARTS 4240",
+            "Art, Community, and Technology": "ARTS 4250",
+            "Science Fictions": "ARTS 4640",
+            "Hactivism": "ARTS 4560",
+            "Performance Art": "ARTS 496X"
+        },
+        "minor": [
+            "Electronic Arts Minor",
+            "Studio Arts Minor",
+            "Video, Performance, and Social Practice Minor"
+        ]
+    },
+    "Well-being: Body and Mind": {
+        "name": "Well-being: Body and Mind",
+        "description": "How do humans maintain a sense of well-being in their lives? What are the relationships between individual, social and ecological health? The Well-being: Body and Mind\u201d Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts. The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.",
+        "remaining_header": "To complete this integrative pathway, students must choose a minimum of 12 credits from the list below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.",
+        "Remaining": {
+            "Basic Drawing": "ARTS 1200",
+            "Deep Listening": "ARTS 2180",
+            "Rensselaer Orchestra": "ARTS 2300",
+            "Rensselaer Concert Choir": "ARTS 2310",
+            "Chamber Music Ensemble": "ARTS 2350",
+            "Private Music Lessons": "ARTS 2750",
+            "Topics in Deep Listening": "ARTS 4180",
+            "Wind Symphony Credit Hours: 1 (can be repeated multiple times)": "ARTS 296X",
+            "Stress and the Brain": "PSYC 4610",
+            "Hormones, Brain, and Behavior": "PSYC 4700",
+            "Nature/Society": "INQR 1110",
+            "Minds and Machines": "INQR 1140",
+            "Well-being: Cultivating Curiosity": "INQR 1175",
+            "The Art of Listening": "INQR 1180",
+            "Media and Society": "INQR 1560",
+            "Songwriting Workshop": "INQR 1700",
+            "Understanding Empathy": "INQR 196X",
+            "Ethics": "PHIL 4240",
+            "Bioethics": "PHIL 4500",
+            "Introduction to Psychological Science": "PSYC 1200",
+            "Psychology of Mindfulness": "PSYC 4430",
+            "Sensibilities": "PSYC 4440",
+            "Drugs, Society, and Behavior": "PSYC 4500",
+            "Positive Psychology": "PSYC 4730",
+            "Well-Being: Creating a Toolbox Credit Hours: 1": "PSYC 196X",
+            "Medicine, Culture, and Society": "STSO 4400",
+            "Gender and Sustainability": "STSO 496X",
+            "Superheroes in the Classroom": "COMM 2616",
+            "Critical Television": "COMM 2750",
+            "The Film Experience": "LITR 2410",
+            "Creative Nonfiction Writing": "WRIT 2320",
+            "Creative Writing:  Short Story": "WRIT 2330"
+        },
+        "minor": [
+            "Well-Being Minor"
+        ]
+    }
+}

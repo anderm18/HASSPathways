@@ -87,7 +87,7 @@
     "Sustainability Studies": {
         "One Of0" : ["Required 1000-level Course"],
         "Required": ["Required 2000-level course"],
-        "One 0f1" : ["Required 4000-level course"],
+        "One Of1" : ["Required 4000-level course"],
         "minor": ["Compatible minor:"]
     },
     "Transfer Student Arts and Humanities": {
