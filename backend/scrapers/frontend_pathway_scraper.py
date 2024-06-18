@@ -4,6 +4,10 @@ from bs4 import BeautifulSoup as bs
 import json
 import unicodedata
 import requests
+import os
+
+mapping = {"Requirements" : "remaining_header"}
+
 
 # input: none
 # output: All of the pathway links in a list, to be processed.
@@ -73,19 +77,26 @@ def scrape_link(link: str) -> dict[str: list[str]]:
     
     soup = bs(page, "html.parser")
     description = soup.find("div", attrs={"class" : "program_description"})
+    
     block = description.find_parent().find_parent().find_parent()
     title = block.find("h1")
     all = block.find("div", attrs={"class" : "custom_leftpad_20"})
     result = dict()
     if (all == None):
         result = special_scrape(page)
+        result["title"] = title.text
+        result["description"] = " ".join((str(description.text.strip()).replace(u"\xa0", " ").replace(u"\n", " ")).split())
         return result
     for el in all.contents:
+        result["title"] = title.text
+        result["description"] = " ".join((str(description.text.strip()).replace(u"\xa0", " ").replace(u"\n", " ").replace(u"\u201c", "")).split())
         subtitle = str(el.find("h2").text.strip())
         courses = el.find_all("li", attrs={"class" : "acalog-course"})
         minor_list = el.find_all("li", attrs={"class" : None})
         adhoc = el.find_all("li", attrs = {"class" : "acalog-adhoc-list-item acalog-adhoc-after"})
         adhoc += el.find_all("li", attrs ={"class" : "acalog-adhoc acalog-adhoc-after"})
+        for ad in adhoc:
+            ad.extract()
         text = ""
         current = dict()
         p_tags = el.find_all("p")
@@ -104,17 +115,29 @@ def scrape_link(link: str) -> dict[str: list[str]]:
                 current["minors"] = text_list
             else:
                 current["text"] = text_list
-        if len(courses) == 0 and len(adhoc) == 0 and len(minor_list) != 0:
+        if len(courses) == 0 and len(adhoc) == 0 and len(minor_list) != 0 or "Compatible minors" in subtitle:
             minors = []
             for minor_el in minor_list:
-                minors.append(minor_el.text.strip())
+                minor_link = minor_el.find("a")
+                if minor_link != None:
+                    minors.append(minor_link.text.strip())
+                else:
+                    minors.append(minor_el.text.strip())
             current["minors"] = minors
         if len(courses) > 0:
             for course_el in courses:
                 to_split = str(course_el.find("a").text)
-                split = to_split.split("-", 1)
-                course_ids.append(split[0].strip())
-                course_names.append(split[1].strip())
+                if "-" not in to_split:
+                    split = to_split.split()
+                    course_id_temp = " ".join(split[0:2])
+                    rest_joined = " ".join(split[2:])
+                    course_name = rest_joined.split(":")[0].removesuffix("Credit Hours")
+                    course_ids.append(course_id_temp.strip())
+                    course_names.append(course_names.strip())
+                else:
+                    split = to_split.split("-", 1)
+                    course_ids.append(split[0].strip())
+                    course_names.append(split[1].strip())
         if len(adhoc) > 0:
             for adhoc_el in adhoc:
                 to_split = str(adhoc_el.text)
@@ -123,26 +146,105 @@ def scrape_link(link: str) -> dict[str: list[str]]:
                     course_id_temp = " ".join(split[0:2])
                     rest_joined = " ".join(split[2:])
                     course_name = rest_joined.split(":")[0].removesuffix("Credit Hours")
-                    course_ids.append(course_id_temp)
-                    course_names.append(course_name)
+                    course_ids.append(course_id_temp.strip())
+                    course_names.append(course_name.strip())
                 else:
                     split = to_split.split("-", 1)
                     course_ids.append(split[0].strip())
                     course_names.append(split[1].strip())
         
         current["course_ids"] = course_ids
-        current["course_names"] = course_names
+        current["course_names"] = course_names  
         result[subtitle] = current
-    print(result)
     return result
+    
+
+def json_builder(pathways):
+    final = dict()
+    classifications = dict()
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    with open(os.path.join(dir_path, "subtitle_classification.json"), 'r') as f:
+        classifications = json.load(f)
+    for i in classifications.keys():
+        pathway_name = i + " Pathway"
+        final[i] = dict()
+        final[i]["name"] = i
+        final[i]["description"] = pathways[pathway_name]["description"]
+        if "remaining_header" in classifications[i].keys():
+            for j in classifications[i]["remaining_header"]:
+                if "text" in pathways[pathway_name][j].keys():
+                    final[i]["remaining_header"] = " ".join(pathways[pathway_name][j]["text"])
+        if "Remaining" in classifications[i].keys():
+            final[i]["Remaining"] = dict()
+            for j in classifications[i]["Remaining"]:
+                print(pathways[pathway_name].keys())
+                if "course_ids" in pathways[pathway_name][j].keys() and "course_names" in pathways[pathway_name][j].keys():
+                    course_names = pathways[pathway_name][j]["course_names"]
+                    course_ids = pathways[pathway_name][j]["course_ids"]
+                    for x in range(len(course_names)):
+                        final[i]["Remaining"][course_names[x]] = course_ids[x]
+        if "minor" in classifications[i].keys():
+            final[i]["minor"] = []
+            
+            for j in classifications[i]["minor"]:
+                print(pathways[pathway_name][j])
+                print(j)
+                final[i]["minor"] += pathways[pathway_name][j]["minors"]
+        
+        if "Required" in classifications[i].keys():
+            final[i]["Required"] = dict()
+            for j in classifications[i]["Required"]:
+                if "course_ids" in pathways[pathway_name][j].keys() and "course_names" in pathways[pathway_name][j].keys():
+                    course_names = pathways[pathway_name][j]["course_names"]
+                    course_ids = pathways[pathway_name][j]["course_ids"]
+                    for x in range(len(course_names)):
+                        final[i]["Required"][course_names[x]] = course_ids[x]
+    
+        if "One Of0" in classifications[i].keys():
+            final[i]["One Of0"] = dict()
+            for j in classifications[i]["One Of0"]:
+                if "course_ids" in pathways[pathway_name][j].keys() and "course_names" in pathways[pathway_name][j].keys():
+                    course_names = pathways[pathway_name][j]["course_names"]
+                    course_ids = pathways[pathway_name][j]["course_ids"]
+                    for x in range(len(course_names)):
+                        final[i]["One Of0"][course_names[x]] = course_ids[x]
+
+        if "One Of1" in classifications[i].keys():
+            final[i]["One Of1"] = dict()
+            for j in classifications[i]["One Of1"]:
+                if "course_ids" in pathways[pathway_name][j].keys() and "course_names" in pathways[pathway_name][j].keys():
+                    course_names = pathways[pathway_name][j]["course_names"]
+                    course_ids = pathways[pathway_name][j]["course_ids"]
+                    for x in range(len(course_names)):
+                        final[i]["One Of1"][course_names[x]] = course_ids[x]
+        
+        if "One Of2" in classifications[i].keys():
+            final[i]["One Of2"] = dict()
+            for j in classifications[i]["One Of2"]:
+                if "course_ids" in pathways[pathway_name][j].keys() and "course_names" in pathways[pathway_name][j].keys():
+                    course_names = pathways[pathway_name][j]["course_names"]
+                    course_ids = pathways[pathway_name][j]["course_ids"]
+                    for x in range(len(course_names)):
+                        final[i]["One Of2"][course_names[x]] = course_ids[x]
+
+    out = json.dumps(final, indent= 4)
+    print(out)
+
+    
     
 
 
 
 links = link_finder()
+pathways = dict()
 for i in links:
-    print(i)
-    scrape_link(i)
+    temp = scrape_link(i)
+    pathways[temp["title"]] = temp
+
+json_builder(pathways)
+#out = json.dumps(pathways, indent= 4)
+#print(out)  
+
 
 
 
