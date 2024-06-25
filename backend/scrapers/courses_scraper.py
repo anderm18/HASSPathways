@@ -17,6 +17,7 @@ BASE_URL = "http://rpi.apis.acalog.com/v1/"
 DEFAULT_QUERY_PARAMS = "?key=3eef8a28f26fb2bcc514e6f1938929a1f9317628&format=xml"
 CHUNK_SIZE = 100
 
+
 # returns the list of catalogs with the newest one being first
 # each catalog is a tuple (year, catalog_id) ex: ('2020-2021', 21)
 def get_catalogs() -> List[Tuple[str, int]]:
@@ -31,9 +32,9 @@ def get_catalogs() -> List[Tuple[str, int]]:
     # For each catalog get its year and id and add that as as tuples to ret
     for catalog in catalogs:
         catalog_id: int = catalog.xpath("@id")[0].split("acalog-catalog-")[1]
-        catalog_year: str = catalog.xpath(".//title/text()")[0].split(
-            "Rensselaer Catalog "
-        )[1]
+        catalog_year: str = [
+            text for text in catalog.xpath("//text()") if "Rensselaer Catalog " in text
+        ][0].split("Rensselaer Catalog ")[1]
         ret.append((catalog_year, catalog_id))
 
     # sort so that the newest catalog is always first
@@ -101,8 +102,9 @@ def get_course_data(course_ids: List[str], catalog_id) -> Dict:
     ]
 
     depts = []
-
-    f = open('depts.json', 'r')
+    
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    f = open(dir_path + '\\depts.json', 'r')
     f = json.load(f)
 
     for dept in f:

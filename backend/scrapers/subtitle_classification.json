@@ -1,0 +1,109 @@
+{
+    "Cognitive Science" : {
+        "Required": ["Requirements"],
+        "Remaining": ["Choose remaining credits from the following:"],
+        "remaining_header" : ["Requirements"],
+        "minor": ["Compatible minors"],
+        "None": ["Optional:"]
+    },
+    "Design, Innovation, and Society" : {
+        "Remaining": ["Required:"]
+    },
+    "Economics": {
+        "One Of0": ["Requirements"],
+        "Remaining": ["Choose remaining credits from the following:"],
+        "minor": ["Compatible minors"]
+    },
+    "Ethics, Integrity, and Social Responsibility": {
+        "Remaining": ["Requirements:"]
+    },
+    "Extent and Limits of Rationality": {
+        "Remaining": ["Requirements"]
+    },
+    "Game Studies": {
+        "Remaining": ["Requirements"]
+    },
+    "Global Languages and Cultures": {
+        "Remaining": ["Requirements"],
+        "minor": ["Compatible minors"]
+    },
+    "Graphic and Interactive Media Design": {
+        "Remaining": ["Graphic Design courses", "Interactive Media Design Courses"],
+        "remaining_header": ["Requirements"],
+        "minor": ["Compatible minors"]
+    },
+    "History": {
+        "Remaining": ["Choose 12 credits from the following:"],
+        "remaining_header": ["Requirements:"],
+        "minor": ["Compatible minor:"]
+    },
+    "Information Technology and Web Sciences":{
+        "Required" : ["Requirements:"], 
+        "Remaining": ["Choose remaining credits from the following:"],
+        "minor": ["Compatible minors"]
+    },
+    "Media and Culture": {
+        "Remaining": ["Available Courses"],
+        "minor" : ["Compatible minor:"]
+    },
+    "Music and Sound": {
+        "Remaining" : ["Music and Culture", "Composition and Production", "Music Performance"],
+        "remaining_header": ["Requirements"],
+        "minor": ["Compatible minors"]
+    },
+    "Narrative and Storytelling": {
+        "Remaining": ["Requirements"]
+    },
+    "Pre-Health": {
+        "Required" : ["Required:"],
+        "One Of0": ["One of the following WRIT or COMM courses*:"]
+    },
+    "Philosophy and Logic": {
+        "Remaining": ["Choose 12 credits from the following:"],
+        "remaining_header": ["Requirements"],
+        "minor": ["Compatible minors"],
+        "None": ["Optional - (Formal Logic and Reasoning):", "Optional - (Broader topics in Philosophy):"]
+    },
+    "Psychological Science": {
+        "Required" : ["Requirements"],
+        "Remaining": ["Additional courses:"],
+        "minor" : ["Compatible minors"],
+        "None" : ["Optional - (Behavioral and Cognitive Neuroscience):", "Optional - (Human Behavior):"]
+    },
+    "Public Health": {
+        "Remaining": ["Choose 12 credits from the following:"],
+        "remaining_header": ["Requirements:"],
+        "minor": ["Compatible minor:"]
+    },
+    "Science, Technology, and Society": {
+        "Remaining": ["Requirements"],
+        "remaining_header": ["Requirements"],
+        "minor" : ["Compatible minor:"]
+    },
+    "Strategic Writing": {
+        "Remaining": ["Requirements"],
+        "minor" : ["Compatible minors"]
+    },
+    "Sustainability Studies": {
+        "One Of0" : ["Required 1000-level Course"],
+        "Required": ["Required 2000-level course"],
+        "One Of1" : ["Required 4000-level course"],
+        "minor": ["Compatible minor:"]
+    },
+    "Transfer Student Arts and Humanities": {
+
+    },
+    "Transfer Student Social Science": {
+        
+    },
+    "Visual and Media Arts": {
+        "Remaining": ["Studio Art", "Electronic Arts", "Video", "Social Practice and Hybrid Genres"],
+        "remaining_header": ["Requirements"],
+        "minor" : ["Compatible minors"]
+    },
+    "Well-being: Body and Mind": {
+        "Remaining" : ["Arts courses", "Cognitive Science courses", "HASS Inquiry Courses", "Philosophy courses", "Psychology courses", "Science and Technology Studies courses", "Communication and Media courses"],
+        "remaining_header": ["Requirements:"],
+        "minor" : ["Compatible minor:"]
+    }
+}

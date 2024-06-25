@@ -1,0 +1,208 @@
+----------------------------------------------------------------------------------------------------
+Pathway name: Cognitive Science
+Difference in Cognitive Science in description
+Old: Discover Cognitive Science: a young but fast-growing field focused on the study of the mind from the perspectives of philosophy, psychology, neuroscience, linguistics, and artifical intellegence.   This pathway will introduce students to the major ideas and theories from these areas, as they relate to the study of mind and intellegence.
+New: Discover Cognitive Science: a young but fast-growing field focused on the study of the mind from the perspectives of philosophy, psychology, neuroscience, linguistics, and artifical intellegence. This pathway will introduce students to the major ideas and theories from these areas, as they relate to the study of mind and intellegence.
+Difference in Cognitive Science in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS (INQR) courses listed below to this pathway. Any 2000, or 4000-level COGS course acceptable; excluding all Independent Studies (2940/4940) and Undergraduate Research Projects (2941/4941). COGS 2120 is a required course for this pathway.
+Difference in Cognitive Science in Remaining
+New key in Remaining: AI in the Information Age
+New key in Remaining: AI and Computing: Past, present, and future
+New key in Remaining: AI & Society
+New key in Cognitive Science: Required
+Missing key in Cognitive Science: One Of0
+----------------------------------------------------------------------------------------------------
+Pathway name: Design, Innovation, and Society
+----------------------------------------------------------------------------------------------------
+Pathway name: Economics
+Difference in Economics in description
+Old: Economics is the study of human behavior, incentives, markets, and governments. Students learn the fundamental models of data analytics of decision-making by individuals and firms, market dynamics, policy-making, globalization, financial economics, and more. Students completing the 12-credit Economics Pathway have the option to take one additional Economics course (4 additional credits) to earn an Economics minor.
+New: Economics is the study of human behavior, incentives, markets, and governments. Students learn the fundamental models of data analytics of decision-making by individuals and firms, market dynamics, policy-making, globalization, financial economics, and more. Students completing the 12-credit Economics Pathway have the option to take one additional Economics course (4 additional credits) to earn an Economics minor. Interested students should examine the list of compatible minors below and pay careful attention to the required courses of these programs before making their course selections for this pathway.
+Difference in Economics in One Of0
+Missing key in One Of0: Introductory Economics
+Missing key in Economics: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Ethics, Integrity, and Social Responsibility
+Difference in Ethics, Integrity, and Social Responsibility in Remaining
+New key in Remaining: IGD: Imagined Futures/Realties
+New key in Remaining: Environmental Ethics
+New key in Remaining: Ethics of AI
+New key in Remaining: Dialogue Facililiation: Environmental Justice
+Missing key in Ethics, Integrity, and Social Responsibility: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Extent and Limits of Rationality
+Difference in Extent and Limits of Rationality in description
+Old: People are not always as rational as they would like to think and are subject to a variety of cognitive and social biases.   People also have the power to correct for these biases, and to do good and constructive work.   How can critical thinking be used constructively?   How can people learn from their past mistakes?   How can social institutions and policies be set up to ensure that wise decisions are made to create a world that lasts into the extended future?
+New: People are not always as rational as they would like to think and are subject to a variety of cognitive and social biases. People also have the power to correct for these biases, and to do good and constructive work. How can critical thinking be used constructively? How can people learn from their past mistakes? How can social institutions and policies be set up to ensure that wise decisions are made to create a world that lasts into the extended future?
+Difference in Extent and Limits of Rationality in Remaining
+New key in Remaining: Moral Dilemmas
+Missing key in Extent and Limits of Rationality: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Game Studies
+Missing key in Game Studies: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Global Languages and Cultures
+Difference in Global Languages and Cultures in description
+Old: This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures.   Students who select this pathway must have all courses that are part of the pathway be in the.   These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing).   After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor.
+New: This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures. Students who select this pathway must have all courses that are part of the pathway be in the same foreign language. These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing). After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor (*see note below).
+Difference in Global Languages and Cultures in minor
+Old: ['Chinese Language Minor', 'COMM 4535  -  Social Media: East & West', 'LANG 4455  -  Chinese Calligraphy', 'LANG 496X', 'OTHER 4000-LEVEL TOPICS']
+New: ['Chinese Language Minor']
+Missing key in Global Languages and Cultures: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Graphic and Interactive Media Design
+Difference in Graphic and Interactive Media Design in description
+Old: This pathway intergrates the theory and practice of graphic and interactive media design in print and digital media.   Students are prepared to use creative and critical thinking to solve visual communication problems in diverse contexts, reaching target audiences with words, symbols, and images.   Offerings in integrative design also prepare students for creating forms of multimedia communication and data representation.
+New: This pathway intergrates the theory and practice of graphic and interactive media design in print and digital media. Students are prepared to use creative and critical thinking to solve visual communication problems in diverse contexts, reaching target audiences with words, symbols, and images. Offerings in integrative design also prepare students for creating forms of multimedia communication and data representation.
+Difference in Graphic and Interactive Media Design in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this intergrative pathwayt, students must choose a minimum of 12 credits as from the course list below. For the pathway, students may freely combine courses from both ‘Graphic Design’ and ‘Interactive Media Design’ areas but should refer to the Minor requirement if they plan to pursue of the compatible minors listed below. *Note that many of the 4000 level courses require COMM 2660 as a prerequisite.
+----------------------------------------------------------------------------------------------------
+Pathway name: History
+Difference in History in description
+Old: The pathway designed for students interested in U.S. and world history.   Courses all intersect in that they offer historical perspectives and approaches to thinking about various topics: from music, to medicine, to broader historical surveys (such as American History).
+New: The pathway designed for students interested in U.S. and world history. Courses all intersect in that they offer historical perspectives and approaches to thinking about various topics: from music, to medicine, to broader historical surveys (such as American History).
+Difference in History in remaining_header
+Old: Choose 12 credits from the following:
+New: To fulfill this pathway, students must complete 12 credit hours of coursework from the list below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students should pay careful attention to prerequisites of classes above the 1000-level. We recommend but do not require that students use their required HASS Inquiry (INQR) course to begin to fulfill this Pathway. Students who are interested in undertaking the compatible minor in History should also pay careful attention to the required courses of that program before making their course selections for this pathway. 
+Difference in History in Remaining
+New key in Remaining: American History
+New key in Remaining: AI and Computing: Past, present, and future
+New key in Remaining: History of Race, Science, and Medicine
+----------------------------------------------------------------------------------------------------
+Pathway name: Information Technology and Web Sciences
+Difference in Information Technology and Web Sciences in description
+Old: The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits  as described below.   Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.
+New: The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.
+Difference in Information Technology and Web Sciences in Required
+Difference in Information Technology and Web Sciences in Required in IT and Society
+Old: ITWS1220
+New: INQR 1220
+Difference in Information Technology and Web Sciences in Required in Introduction to Human Computer Interaction
+Old: ITWS2210
+New: ITWS 2210
+Missing key in Information Technology and Web Sciences: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Media and Culture
+Difference in Media and Culture in Remaining
+New key in Remaining: News, Media, Culture and Politics
+----------------------------------------------------------------------------------------------------
+Pathway name: Music and Sound
+Difference in Music and Sound in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this integrative pathway, students must choose a minimum of 12 credits as described. Only four (4) credits from the HASS inquiry (INQR) courses listed below can be applied to the pathway. The courses in the music pathway are organized in categories: Music and Culture, Composition and Production, and Performance. Students may concentrate their selection of courses within a single catagory, or they may combine courses between any of the three catagories.
+Difference in Music and Sound in Remaining
+New key in Remaining: Art of Songwriting
+Difference in Music and Sound in minor
+Old: []
+New: ['Music']
+----------------------------------------------------------------------------------------------------
+Pathway name: Narrative and Storytelling
+Difference in Narrative and Storytelling in description
+Old: The Narrative and Storytelling Pathway offers discussion-oriented courses across a range of literary genres and themes, with a choice of emphasis on either literature, creative writing, or both.   Students will learn to read and write literary art critically and creatively, with clarity and imagination, and with sensitivity to multi-cultural expressions of diversity.
+New: The Narrative and Storytelling Pathway offers discussion-oriented courses across a range of literary genres and themes, with a choice of emphasis on either literature, creative writing, or both. Students will learn to read and write literary art critically and creatively, with clarity and imagination, and with sensitivity to multi-cultural expressions of diversity.
+Missing key in Narrative and Storytelling: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Pre-Health
+Difference in Pre-Health in description
+Old: The Pre-Health pathway is designed for students who are planning to apply to medical school or pursuing other health-related careers.   It includes coursework that is required as part of the medical school application process.
+New: The Pre-Health pathway is designed for students who are planning to apply to medical school or pursuing other health-related careers. It includes coursework that is required as part of the medical school application process.
+New key in Pre-Health: Required
+Difference in Pre-Health in One Of0
+New key in One Of0: level COMM and WRIT courses can be approved pending review by the HASS Associate Dean for Academic Affairs.
+Missing key in Pre-Health: Remaining
+Missing key in Pre-Health: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Philosophy and Logic
+Difference in Philosophy and Logic in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS Inquiry (INQR) courses listed below to this pathway. Choose remaining credits from any 2000 or 4000-level PHIL courses; excluding all Independent Studies (2940) and Undergraduate Research Projects (2941).
+----------------------------------------------------------------------------------------------------
+Pathway name: Psychological Science
+Difference in Psychological Science in description
+Old: The ability to understand and predict how people act and think is more important than ever in addressing many of the greatest challenges that we face as a society.   In this pathway, students will learn how behavior and thought are influenced by cognitive, emotional, developmental, social, and environmental factors, and how to apply psychological principles.
+New: The ability to understand and predict how people act and think is more important than ever in addressing many of the greatest challenges that we face as a society. In this pathway, students will learn how behavior and thought are influenced by cognitive, emotional, developmental, social, and environmental factors, and how to apply psychological principles.
+New key in Psychological Science: Required
+Missing key in Psychological Science: One Of0
+Missing key in Psychological Science: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Public Health
+Difference in Public Health in description
+Old: The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med  track beyond the pre-health/pre-med pathway.
+New: The pathway in Public Health is designed for students interested in health-related careers who wish to develop skills and knowledge about global public health challenges. It also offers important courses for students on a pre-health/pre-med track beyond the pre-health/pre-med pathway.
+Difference in Public Health in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this integrative pathway, students must choose a minimum of 12 credits as described. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students who are interested in undertaking the compatible minor in Public Health should also pay careful attention to the required courses of that program before making their course selections for this pathway.
+Difference in Public Health in Remaining
+New key in Remaining: Politics: Epidemics and Pandemics
+New key in Remaining: History or Race, Science, and Medicine
+----------------------------------------------------------------------------------------------------
+Pathway name: Science, Technology, and Society
+Difference in Science, Technology, and Society in remaining_header
+Old: Choose 12 credits from the following:
+New: To fulfill this pathway, students must complete 12 credit hours in courses offered by the Department of Science & Technology Studies (courses with the STSO prefix, and the specific INQR courses listed below, but excluding credits from independent studies and URPs). Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students should pay careful attention to prerequisites of classes above the 1000-level. Students who are interested in undertaking the compatible minor and major in Science, Technology, and Society should also pay careful attention to the required courses of those programs before making their course selections for this pathway. We recommend (but do not require) that students use their HASS Inquiry course to begin to fulfill this Pathway. HASS Inquiry courses offered by the Department of Science and Technology Studies are the following:
+Difference in Science, Technology, and Society in Remaining
+New key in Remaining: Professional Development -Technical Issues and Solutions
+New key in Remaining: AI and Computing: Past, present, and future
+Missing key in Remaining: Professional Development &#x2013;Technical Issues and Solutions
+----------------------------------------------------------------------------------------------------
+Pathway name: Strategic Writing
+Difference in Strategic Writing in description
+Old: This pathway is designed to train versatile, critical, and self-possessed 21st-century communicators.   Students who successfully complete this pathway will demonstrate the ability to make focused audience-appropriate arguments; communicate effectively across diverse rhetorical, socio-cultural, and disciplinary contexts; and respond creatively to the analytical demands involved with developing, arranging, and revising ideas and arguments.
+New: This pathway is designed to train versatile, critical, and self-possessed 21st-century communicators. Students who successfully complete this pathway will demonstrate the ability to make focused audience-appropriate arguments; communicate effectively across diverse rhetorical, socio-cultural, and disciplinary contexts; and respond creatively to the analytical demands involved with developing, arranging, and revising ideas and arguments.
+Missing key in Strategic Writing: remaining_header
+----------------------------------------------------------------------------------------------------
+Pathway name: Sustainability Studies
+New key in Sustainability Studies: Required
+Difference in Sustainability Studies in One Of0
+Difference in Sustainability Studies in One Of0 in Nature/Society
+Old: INQR1110
+New: INQR 1110
+Difference in Sustainability Studies in One Of0 in Sustainability Debates
+Old: INQR1240
+New: INQR 1240
+Difference in Sustainability Studies in One Of0 in Designing Climate Justice
+Old: INQR1250
+New: INQR 1250
+Difference in Sustainability Studies in One Of0 in Science, Technology, and Society
+Old: STSO1110
+New: STSO 1100
+Difference in Sustainability Studies in One Of1
+New key in One Of1: Food, Farms, and Famine
+New key in One Of1: Sustainability Education
+New key in One Of1: Environmental Media & Data
+New key in One Of1: Environmental Justice
+New key in One Of1: Environmental Philosophy
+New key in One Of1: Politics of Design
+New key in One Of1: Globalization and Development
+New key in One Of1: History of American Technology
+New key in One Of1: Design and Innovation Studio A
+New key in One Of1: Sustainable Energy Systems
+Missing key in One Of1: Environment and Society
+Missing key in Sustainability Studies: Remaining
+----------------------------------------------------------------------------------------------------
+Pathway name: Transfer Student Arts and Humanities
+Difference in Transfer Student Arts and Humanities in description
+Old: This  pathway  is intended for transfer students that enter with sophomore  status or above and  who have completed significant coursework within the arts and humanities to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level:
+New: This pathway is intended for transfer students that enter with sophomore status or above and who have completed significant coursework within the arts and humanities to be applied toward a pathway. Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must complete a minimum of 12 credits of coursework with the following course prefixes, with at least 8 credit hours at or above the 2000-level: ARTS COMM GSAS IHSS LANG LITR PHIL STSO WRIT
+Missing key in Transfer Student Arts and Humanities: Remaining
+----------------------------------------------------------------------------------------------------
+Pathway name: Transfer Student Social Science
+Difference in Transfer Student Social Science in description
+Old: This pathway is intended for transfer students that enter with sophomore status or above and  who have completed significant coursework within the social sciences  to be applied toward a pathway.   Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level.
+New: This pathway is intended for transfer students that enter with sophomore status or above and who have completed significant coursework within the social sciences to be applied toward a pathway. Coursework may include a mix of transfer courses that come in as electives or courses taken at Rensselaer. To complete this integrative pathway, students must choose a minimum of 12 credits of coursework with the following course prefixs, with at least 8 credit hours at or above the 2000-level. COGS ECON GSAS IHSS PSYC STSO
+Missing key in Transfer Student Social Science: Remaining
+----------------------------------------------------------------------------------------------------
+Pathway name: Visual and Media Arts
+Difference in Visual and Media Arts in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this integrative pathway, students must choose a minimum of 12 as described. Only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway.  The courses in the Visual and Media Arts pathway are organized in categories: Studio Art, Electronic Arts, Video, Social Practice and Hybrid Genres. Students may concentrate their selection of courses within a single catagory, or they may combine courses between any of the four catagories.
+----------------------------------------------------------------------------------------------------
+Pathway name: Well-being: Body and Mind
+Difference in Well-being: Body and Mind in description
+Old: How do humans maintain a sense of well-being in their lives?What are the relationships between individual, social and ecological health?   The "Well-being: Body and Mind" Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts. The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.
+New: How do humans maintain a sense of well-being in their lives? What are the relationships between individual, social and ecological health? The Well-being: Body and Mind” Integrative Pathway explores well-being through theoretical and practical courses across a range of disciplines including philosophy, psychology, science and technology studies, health sciences, and the arts. The pathway includes courses that engage issues of individual, collective and environmental well-being as subject matter, as well as courses that introduce experiential practices such as mindfulness meditation, journaling, and community engagement.
+Difference in Well-being: Body and Mind in remaining_header
+Old: Choose 12 credits from the following:
+New: To complete this integrative pathway, students must choose a minimum of 12 credits from the list below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.
