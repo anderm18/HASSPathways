@@ -2,11 +2,33 @@
 Pathway name: Cognitive Science
 Difference in Cognitive Science in description
 Old: Discover Cognitive Science: a young but fast-growing field focused on the study of the mind from the perspectives of philosophy, psychology, neuroscience, linguistics, and artifical intellegence.   This pathway will introduce students to the major ideas and theories from these areas, as they relate to the study of mind and intellegence.
-New: Discover Cognitive Science: a young but fast-growing field focused on the study of the mind from the perspectives of philosophy, psychology, neuroscience, linguistics, and artifical intellegence. This pathway will introduce students to the major ideas and theories from these areas, as they relate to the study of mind and intellegence.
+New: Discover Cognitive Science: a young but fast-growing field focused on the study of the mind from the perspectives of philosophy, psychology, neuroscience, linguistics, and artificial intelligence. This pathway will introduce students to the major ideas and theories from these areas, as they relate to the study of mind and intelligence.
 Difference in Cognitive Science in remaining_header
 Old: Choose 12 credits from the following:
-New: To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS (INQR) courses listed below to this pathway. Any 2000, or 4000-level COGS course acceptable; excluding all Independent Studies (2940/4940) and Undergraduate Research Projects (2941/4941). COGS 2120 is a required course for this pathway.
+New: To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS (INQR) courses listed below to this pathway. Any 2000, or 4000-level COGS course is acceptable; excluding all Independent Studies (2940/4940) and Undergraduate Research Projects (2941/4941). Introduction to Cognitive Science (below) is required for this Pathway.
 Difference in Cognitive Science in Remaining
+Difference in Cognitive Science in Remaining in Animal Cognition and Interaction with Humans
+Old: COGS 4220
+New: PSYC 4220
+Difference in Cognitive Science in Remaining in Introduction to Cognitive Neuroscience
+Old: COGS 4330
+New: PSYC 4330
+Difference in Cognitive Science in Remaining in Behavioral Neuroscience
+Old: COGS 4360
+New: PSYC 4360
+Difference in Cognitive Science in Remaining in Sensibilities
+Old: COGS 4440
+New: PSYC 4440
+Difference in Cognitive Science in Remaining in Cognition and the Brain
+Old: COGS 4600
+New: PSYC 4600
+Difference in Cognitive Science in Remaining in Stress and the Brain
+Old: COGS 4610
+New: PSYC 4610
+Difference in Cognitive Science in Remaining in Hormones, Brain, and Behavior
+Old: COGS 4700
+New: PSYC 4700
+New key in Remaining: Psychology of Mindfulness
 New key in Remaining: AI in the Information Age
 New key in Remaining: AI and Computing: Past, present, and future
 New key in Remaining: AI & Society
@@ -19,6 +41,11 @@ Pathway name: Economics
 Difference in Economics in description
 Old: Economics is the study of human behavior, incentives, markets, and governments. Students learn the fundamental models of data analytics of decision-making by individuals and firms, market dynamics, policy-making, globalization, financial economics, and more. Students completing the 12-credit Economics Pathway have the option to take one additional Economics course (4 additional credits) to earn an Economics minor.
 New: Economics is the study of human behavior, incentives, markets, and governments. Students learn the fundamental models of data analytics of decision-making by individuals and firms, market dynamics, policy-making, globalization, financial economics, and more. Students completing the 12-credit Economics Pathway have the option to take one additional Economics course (4 additional credits) to earn an Economics minor. Interested students should examine the list of compatible minors below and pay careful attention to the required courses of these programs before making their course selections for this pathway.
+Difference in Economics in Remaining
+New key in Remaining: Topics in Economics
+Difference in Economics in minor
+Old: ['Economics Minor', 'Economics of Banking and Finance Minor', 'Economics of Healthcare Markets Minor', 'Economics of Quantitative Modeling Minor', 'Economics of Technology and Innovation Minor']
+New: ['Economics Minor', 'Economics of Banking and Finance Minor', 'Economics of Quantitative Modeling Minor']
 Difference in Economics in One Of0
 Missing key in One Of0: Introductory Economics
 Missing key in Economics: remaining_header
@@ -36,7 +63,13 @@ Difference in Extent and Limits of Rationality in description
 Old: People are not always as rational as they would like to think and are subject to a variety of cognitive and social biases.   People also have the power to correct for these biases, and to do good and constructive work.   How can critical thinking be used constructively?   How can people learn from their past mistakes?   How can social institutions and policies be set up to ensure that wise decisions are made to create a world that lasts into the extended future?
 New: People are not always as rational as they would like to think and are subject to a variety of cognitive and social biases. People also have the power to correct for these biases, and to do good and constructive work. How can critical thinking be used constructively? How can people learn from their past mistakes? How can social institutions and policies be set up to ensure that wise decisions are made to create a world that lasts into the extended future?
 Difference in Extent and Limits of Rationality in Remaining
+Difference in Extent and Limits of Rationality in Remaining in Critical Thinking
+Old: PSYC 2100
+New: PHIL 2100
+New key in Remaining: Introduction to Formal Logic
 New key in Remaining: Moral Dilemmas
+New key in Remaining: Intermediate Formal Logic & AI
+Missing key in Remaining: Introduction to Logic
 Missing key in Extent and Limits of Rationality: remaining_header
 ----------------------------------------------------------------------------------------------------
 Pathway name: Game Studies
@@ -46,6 +79,9 @@ Pathway name: Global Languages and Cultures
 Difference in Global Languages and Cultures in description
 Old: This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures.   Students who select this pathway must have all courses that are part of the pathway be in the.   These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing).   After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor.
 New: This pathway promotes the development of skills to help students effectively communicate both domestically and internationally, as well as enhance their appreciation for other cultures. Students who select this pathway must have all courses that are part of the pathway be in the same foreign language. These courses may be fulfilled through transfer credits. Those that concentrate on the Chinese language offerings are RPI will learn about Chinese culture, as well as all four types of language skills (listening, speaking, reading, and writing). After completing a Global Languages and Culture pathway with a Chinese focus, students will be able to communicate in Chinese at their targeted proficiency levels and think creatively and critically. Students that complete their pathway entirely through Chinese offerings at RPI can then continue on to the Chinese Language Minor (*see note below).
+Difference in Global Languages and Cultures in Remaining
+New key in Remaining: Topics in Language
+New key in Remaining: Chinese Language and Culture in Film
 Difference in Global Languages and Cultures in minor
 Old: ['Chinese Language Minor', 'COMM 4535  -  Social Media: East & West', 'LANG 4455  -  Chinese Calligraphy', 'LANG 496X', 'OTHER 4000-LEVEL TOPICS']
 New: ['Chinese Language Minor']
@@ -58,6 +94,8 @@ New: This pathway intergrates the theory and practice of graphic and interactive
 Difference in Graphic and Interactive Media Design in remaining_header
 Old: Choose 12 credits from the following:
 New: To complete this intergrative pathwayt, students must choose a minimum of 12 credits as from the course list below. For the pathway, students may freely combine courses from both ‘Graphic Design’ and ‘Interactive Media Design’ areas but should refer to the Minor requirement if they plan to pursue of the compatible minors listed below. *Note that many of the 4000 level courses require COMM 2660 as a prerequisite.
+Difference in Graphic and Interactive Media Design in Remaining
+New key in Remaining: Interface Design: Hypermedia Theory and Application
 ----------------------------------------------------------------------------------------------------
 Pathway name: History
 Difference in History in description
@@ -67,14 +105,20 @@ Difference in History in remaining_header
 Old: Choose 12 credits from the following:
 New: To fulfill this pathway, students must complete 12 credit hours of coursework from the list below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway. Students should pay careful attention to prerequisites of classes above the 1000-level. We recommend but do not require that students use their required HASS Inquiry (INQR) course to begin to fulfill this Pathway. Students who are interested in undertaking the compatible minor in History should also pay careful attention to the required courses of that program before making their course selections for this pathway. 
 Difference in History in Remaining
-New key in Remaining: American History
+New key in Remaining: Art in Context
+New key in Remaining: Learning Open Source Technologies
 New key in Remaining: AI and Computing: Past, present, and future
 New key in Remaining: History of Race, Science, and Medicine
+Missing key in Remaining: Art History
+Missing key in Remaining: History of American Technology
 ----------------------------------------------------------------------------------------------------
 Pathway name: Information Technology and Web Sciences
 Difference in Information Technology and Web Sciences in description
 Old: The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits  as described below.   Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.
 New: The pathway in Information Technology and Web Science (ITWS) is designed to introduce students to the social aspects and human interactions that technology provides in our lives and workplaces. Students will gain knowledge of the social, legal, and ethical issues in employing technology around the world and will learn how to recognize and respond to human-centered design issues to make technology more usable. To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.
+Difference in Information Technology and Web Sciences in Remaining
+New key in Remaining: Introduction to Formal Logic
+Missing key in Remaining: Introduction to Logic
 Difference in Information Technology and Web Sciences in Required
 Difference in Information Technology and Web Sciences in Required in IT and Society
 Old: ITWS1220
@@ -86,14 +130,18 @@ Missing key in Information Technology and Web Sciences: remaining_header
 ----------------------------------------------------------------------------------------------------
 Pathway name: Media and Culture
 Difference in Media and Culture in Remaining
+New key in Remaining: Adaptations in Games and Media
+New key in Remaining: Visual Essay in Pop Culture
 New key in Remaining: News, Media, Culture and Politics
+New key in Remaining: Media and Dis/Misinformation
 ----------------------------------------------------------------------------------------------------
 Pathway name: Music and Sound
 Difference in Music and Sound in remaining_header
 Old: Choose 12 credits from the following:
 New: To complete this integrative pathway, students must choose a minimum of 12 credits as described. Only four (4) credits from the HASS inquiry (INQR) courses listed below can be applied to the pathway. The courses in the music pathway are organized in categories: Music and Culture, Composition and Production, and Performance. Students may concentrate their selection of courses within a single catagory, or they may combine courses between any of the three catagories.
 Difference in Music and Sound in Remaining
-New key in Remaining: Art of Songwriting
+New key in Remaining: The Art of Songwriting
+New key in Remaining: Wind Symphony (1 credit; course may be repeated multiple times for credit)
 Difference in Music and Sound in minor
 Old: []
 New: ['Music']
@@ -102,6 +150,12 @@ Pathway name: Narrative and Storytelling
 Difference in Narrative and Storytelling in description
 Old: The Narrative and Storytelling Pathway offers discussion-oriented courses across a range of literary genres and themes, with a choice of emphasis on either literature, creative writing, or both.   Students will learn to read and write literary art critically and creatively, with clarity and imagination, and with sensitivity to multi-cultural expressions of diversity.
 New: The Narrative and Storytelling Pathway offers discussion-oriented courses across a range of literary genres and themes, with a choice of emphasis on either literature, creative writing, or both. Students will learn to read and write literary art critically and creatively, with clarity and imagination, and with sensitivity to multi-cultural expressions of diversity.
+Difference in Narrative and Storytelling in Remaining
+Difference in Narrative and Storytelling in Remaining in Multicultural American Literature
+Old: LITR 4880
+New: WRIT 496X
+New key in Remaining: Adaptations in Games and Media
+New key in Remaining: Visual Essay in Pop Culture
 Missing key in Narrative and Storytelling: remaining_header
 ----------------------------------------------------------------------------------------------------
 Pathway name: Pre-Health
@@ -118,11 +172,20 @@ Pathway name: Philosophy and Logic
 Difference in Philosophy and Logic in remaining_header
 Old: Choose 12 credits from the following:
 New: To complete this integrative pathway, students must choose a minimum of 12 credits as described below. Only four (4) credits can be applied from the HASS Inquiry (INQR) courses listed below to this pathway. Choose remaining credits from any 2000 or 4000-level PHIL courses; excluding all Independent Studies (2940) and Undergraduate Research Projects (2941).
+Difference in Philosophy and Logic in Remaining
+New key in Remaining: Introduction to Formal Logic
+New key in Remaining: Topics in Philosophy
+New key in Remaining: Readings in Philosophy
+Missing key in Remaining: Introduction to Logic
 ----------------------------------------------------------------------------------------------------
 Pathway name: Psychological Science
 Difference in Psychological Science in description
 Old: The ability to understand and predict how people act and think is more important than ever in addressing many of the greatest challenges that we face as a society.   In this pathway, students will learn how behavior and thought are influenced by cognitive, emotional, developmental, social, and environmental factors, and how to apply psychological principles.
 New: The ability to understand and predict how people act and think is more important than ever in addressing many of the greatest challenges that we face as a society. In this pathway, students will learn how behavior and thought are influenced by cognitive, emotional, developmental, social, and environmental factors, and how to apply psychological principles.
+Difference in Psychological Science in Remaining
+New key in Remaining: Topics in Psychology
+Missing key in Remaining: Critical Thinking
+Missing key in Remaining: Professional Development II: Leadership Theories
 New key in Psychological Science: Required
 Missing key in Psychological Science: One Of0
 Missing key in Psychological Science: remaining_header
@@ -145,12 +208,16 @@ New: To fulfill this pathway, students must complete 12 credit hours in courses 
 Difference in Science, Technology, and Society in Remaining
 New key in Remaining: Professional Development -Technical Issues and Solutions
 New key in Remaining: AI and Computing: Past, present, and future
+Missing key in Remaining: Law & Society
 Missing key in Remaining: Professional Development &#x2013;Technical Issues and Solutions
+Missing key in Remaining: History of American Technology
 ----------------------------------------------------------------------------------------------------
 Pathway name: Strategic Writing
 Difference in Strategic Writing in description
 Old: This pathway is designed to train versatile, critical, and self-possessed 21st-century communicators.   Students who successfully complete this pathway will demonstrate the ability to make focused audience-appropriate arguments; communicate effectively across diverse rhetorical, socio-cultural, and disciplinary contexts; and respond creatively to the analytical demands involved with developing, arranging, and revising ideas and arguments.
 New: This pathway is designed to train versatile, critical, and self-possessed 21st-century communicators. Students who successfully complete this pathway will demonstrate the ability to make focused audience-appropriate arguments; communicate effectively across diverse rhetorical, socio-cultural, and disciplinary contexts; and respond creatively to the analytical demands involved with developing, arranging, and revising ideas and arguments.
+Difference in Strategic Writing in Remaining
+New key in Remaining: Visual Essay in Pop Culture
 Missing key in Strategic Writing: remaining_header
 ----------------------------------------------------------------------------------------------------
 Pathway name: Sustainability Studies
@@ -176,7 +243,6 @@ New key in One Of1: Environmental Justice
 New key in One Of1: Environmental Philosophy
 New key in One Of1: Politics of Design
 New key in One Of1: Globalization and Development
-New key in One Of1: History of American Technology
 New key in One Of1: Design and Innovation Studio A
 New key in One Of1: Sustainable Energy Systems
 Missing key in One Of1: Environment and Society
@@ -198,6 +264,15 @@ Pathway name: Visual and Media Arts
 Difference in Visual and Media Arts in remaining_header
 Old: Choose 12 credits from the following:
 New: To complete this integrative pathway, students must choose a minimum of 12 as described. Only four (4) credits from HASS Inquiry (INQR) courses listed below can be applied to the pathway.  The courses in the Visual and Media Arts pathway are organized in categories: Studio Art, Electronic Arts, Video, Social Practice and Hybrid Genres. Students may concentrate their selection of courses within a single catagory, or they may combine courses between any of the four catagories.
+Difference in Visual and Media Arts in Remaining
+New key in Remaining: Art in Context
+Difference in Visual and Media Arts in Remaining in Fundamentals of 2D Design
+Old: ARTS 2220
+New: ARTS 1220
+New key in Remaining: Advanced Video - Media Studio
+New key in Remaining: Performance Art
+Missing key in Remaining: Art History
+Missing key in Remaining: Writing and Directing for Video
 ----------------------------------------------------------------------------------------------------
 Pathway name: Well-being: Body and Mind
 Difference in Well-being: Body and Mind in description
@@ -206,3 +281,9 @@ New: How do humans maintain a sense of well-being in their lives? What are the r
 Difference in Well-being: Body and Mind in remaining_header
 Old: Choose 12 credits from the following:
 New: To complete this integrative pathway, students must choose a minimum of 12 credits from the list below. Only four (4) credits from the HASS Inquiry (INQR) courses listed below can be applied to the pathway.
+Difference in Well-being: Body and Mind in Remaining
+New key in Remaining: Wind Symphony
+New key in Remaining: Understanding Empathy
+New key in Remaining: IGD: Imagined Future/Realities
+New key in Remaining: Well-Being: Creating a Toolbox
+New key in Remaining: Gender and Sustainability
