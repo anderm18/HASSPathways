@@ -161,20 +161,25 @@ def scrape_link(link: str) -> dict[str: list[str]]:
         if len(courses) > 0:
             for course_el in courses:
                 to_split = str(course_el.find("a").text)
+                if "–" in to_split:
+                    to_split = to_split.replace("–", "-")
                 if "-" not in to_split:
                     split = to_split.split()
                     course_id_temp = " ".join(split[0:2])
                     rest_joined = " ".join(split[2:])
                     course_name = rest_joined.split(":")[0].removesuffix("Credit Hours")
                     course_ids.append(course_id_temp.strip())
-                    course_names.append(course_names.strip())
+                    course_names.append(course_name.strip())
                 else:
                     split = to_split.split("-", 1)
+                    
                     course_ids.append(split[0].strip())
                     course_names.append(split[1].strip())
         if len(adhoc) > 0:
             for adhoc_el in adhoc:
                 small_ps = adhoc_el.find_all("p")
+                if len(small_ps) == 0:
+                    small_ps = [adhoc_el]
                 for tag in small_ps:
                     to_split = str(tag.text)
                     if "-" not in to_split:
@@ -192,7 +197,8 @@ def scrape_link(link: str) -> dict[str: list[str]]:
                         course_name = split[1].strip()
                         if ("Credit Hours" in split[1]):
                             course_name = split[1].strip().rsplit(":", 1)[0].removesuffix("Credit Hours")
-                        
+                        elif ("Credit Hours" not in split[1]):
+                            course_name = split[1].strip().split("(", 1)[0].strip()
                         course_names.append(course_name.strip())
         
         current["course_ids"] = course_ids
@@ -313,12 +319,16 @@ def test_one(link):
 # Main functiom which scrapes all pathways and outputs to a json file to the file location.
 
 def scrape_all(location):
+    print("Finding Links...")
     links = link_finder()
     pathways = dict()
+    print("Scraping Pathways...")
     for i in links:
         temp = scrape_link(i)
+        print("Pathway Scraped: " + temp["title"])
         pathways[temp["title"]] = temp
 
+    print("Building JSON...")
     final = json_builder(pathways)
     out = json.dumps(final, indent= 4)
     with open(location, 'w') as f:
@@ -360,7 +370,7 @@ def verify_output(json_new, json_old, verify_file_loc):
                 if j not in old[i].keys():
                     verify += "New key in " + i + ": " + j + "\n"
                 elif new[i][j] != old[i][j]:
-                    verify = "Difference in " + i + " in " + j + "\n"
+                    verify += "Difference in " + i + " in " + j + "\n"
                     if type(new[i][j]) == dict:
                         for k in new[i][j].keys():
                             if k not in old[i][j].keys():
@@ -390,8 +400,7 @@ def verify_output(json_new, json_old, verify_file_loc):
     
 
     
-
-if "__name__" == "__main__":
+if __name__ == "__main__":
     year = "2023-2024"
     parent_path = os.path.dirname(os.path.dirname(dir_path))
     json_path = os.path.join(parent_path, "frontend", "src", "data", "json")
@@ -400,4 +409,8 @@ if "__name__" == "__main__":
     old_pathway_loc = os.path.join(path, 'pathways_old.json')
     verify_loc = os.path.join(path, 'verify.txt')
     scrape_all(pathway_loc)
+    print("Verifying...")
     verify_output(pathway_loc, old_pathway_loc, verify_loc)
+
+
+
