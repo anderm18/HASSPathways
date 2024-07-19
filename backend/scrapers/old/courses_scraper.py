@@ -1,6 +1,7 @@
 # This scraper is mainly sourced from the QUACs team and
 # is a modified version of their catalog scraper
 
+from io import StringIO
 from typing import Dict, List, Tuple
 import requests
 import sys
@@ -27,14 +28,16 @@ def get_catalogs() -> List[Tuple[str, int]]:
         ).text.encode("utf8")
     )
     catalogs = catalogs_xml.xpath("//catalogs/catalog")
-
+    print(f"{BASE_URL}content{DEFAULT_QUERY_PARAMS}&method=getCatalogs")
+    print(len(catalogs))
     ret: List[Tuple[str, int]] = []
     # For each catalog get its year and id and add that as as tuples to ret
     for catalog in catalogs:
         catalog_id: int = catalog.xpath("@id")[0].split("acalog-catalog-")[1]
         catalog_year: str = [
-            text for text in catalog.xpath("//text()") if "Rensselaer Catalog " in text
+            text for text in catalog.xpath(".//text()") if "Rensselaer Catalog " in text
         ][0].split("Rensselaer Catalog ")[1]
+        print(catalog_year)
         ret.append((catalog_year, catalog_id))
 
     # sort so that the newest catalog is always first
@@ -110,14 +113,21 @@ def get_course_data(course_ids: List[str], catalog_id) -> Dict:
     for dept in f:
         depts.append(dept)
 
+    A_NAMESPACE = "http://www.w3.org/2005/Atom"
+    NSMAP = {None: "http://acalog.com/catalog/1.0", "a" : A_NAMESPACE}
+
     for chunk in course_chunks:
         ids = "".join([f"&ids[]={id}" for id in chunk])
         url = f"{BASE_URL}content{DEFAULT_QUERY_PARAMS}&method=getItems&options[full]=1&catalog={catalog_id}&type=courses{ids}"
-
-        courses_xml = html.fromstring(requests.get(url).text.encode("utf8"))
-        courses = courses_xml.xpath("//courses/course[not(@child-of)]")
+        print(url)
+        #print(requests.get(url).content)
+        courses_xml = etree.fromstring(requests.get(url).content)
+        courses = courses_xml.xpath("//catalog/courses/course[not(@child-of)]")
+        #print(courses)
         for course in courses:
-            subj = course.xpath("./content/prefix/text()")[0].strip()
+            subj = course.xpath("./a:content/prefix/text()")[0].strip()
+            print(subj)
+            print("Hi")
             if not (subj in depts):
                 continue
             ID = course.xpath("./content/code/text()")[0].strip()
