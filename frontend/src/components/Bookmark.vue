@@ -1,66 +1,71 @@
 <template>
-    <span v-if="!myPathway" class="bookmark-holder">
-        <v-tooltip v-if="bookmarkSelected" bottom>
-            <template #activator="{on, attrs}">
-                <v-icon
-                    class="selected"
-                    v-bind="attrs"
-                    large
-                    v-on="on"
-                    @click="deselectBookmark()"
-                >
-                    mdi-bookmark
-                </v-icon>
-            </template>
-            <span>Remove pathway from "My Pathways"</span>
-        </v-tooltip>
-        <v-tooltip v-else bottom>
-            <template #activator="{on, attrs}">
-                <v-icon
-                    class="unselected"
-                    v-bind="attrs"
-                    large
-                    v-on="on"
-                    @click="selectBookmark()"
-                >
-                    mdi-bookmark-outline
-                </v-icon>
-            </template>
-            <span>Add pathway to "My Pathways"</span>
-        </v-tooltip>
-    </span>
-    <span v-else class="bookmark-holder">
-        <v-tooltip v-if="bookmarkSelected" bottom>
-            <template #activator="{on, attrs}">
-                <v-icon
-                    class="selected"
-                    v-bind="attrs"
-                    large
-                    dense
-                    v-on="on"
-                    @click="deselectBookmark()"
-                >
-                    mdi-bookmark
-                </v-icon>
-            </template>
-            <span>Remove pathway from "My Pathways"</span>
-        </v-tooltip>
-        <v-tooltip v-else bottom>
-            <template #activator="{on, attrs}">
-                <v-icon
-                    class="unselected"
-                    v-bind="attrs"
-                    large
-                    dense
-                    v-on="on"
-                    @click="selectBookmark()"
-                >
-                    mdi-bookmark-outline
-                </v-icon>
-            </template>
-            <span>Add pathway to "My Pathways"</span>
-        </v-tooltip>
-    </span>
+    <div>
+        <span v-if="!myPathway" class="bookmark-holder">
+            <v-tooltip v-if="bookmarkSelected" bottom>
+                <template #activator="{on, attrs}">
+                    <v-icon
+                        class="selected"
+                        v-bind="attrs"
+                        large
+                        v-on="on"
+                        @click="deselectBookmark()"
+                    >
+                        mdi-bookmark
+                    </v-icon>
+                </template>
+                <span>Remove pathway from "My Pathways"</span>
+            </v-tooltip>
+            <v-tooltip v-else bottom>
+                <template #activator="{on, attrs}">
+                    <v-icon
+                        class="unselected"
+                        v-bind="attrs"
+                        large
+                        v-on="on"
+                        @click="selectBookmark()"
+                    >
+                        mdi-bookmark-outline
+                    </v-icon>
+                </template>
+                <span>Add pathway to "My Pathways"</span>
+            </v-tooltip>
+        </span>
+        <span v-else class="bookmark-holder">
+            <v-tooltip v-if="bookmarkSelected" bottom>
+                <template #activator="{on, attrs}">
+                    <v-icon
+                        class="selected"
+                        v-bind="attrs"
+                        large
+                        dense
+                        v-on="on"
+                        @click="deselectBookmark()"
+                    >
+                        mdi-bookmark
+                    </v-icon>
+                </template>
+                <span>Remove pathway from "My Pathways"</span>
+            </v-tooltip>
+            <v-tooltip v-else bottom>
+                <template #activator="{on, attrs}">
+                    <v-icon
+                        class="unselected"
+                        v-bind="attrs"
+                        large
+                        dense
+                        v-on="on"
+                        @click="selectBookmark()"
+                    >
+                        mdi-bookmark-outline
+                    </v-icon>
+                </template>
+                <span>Add pathway to "My Pathways"</span>
+            </v-tooltip>
+        </span>
+        <v-snackbar v-model="snackbar" top right>
+            Bookmarks toggled!
+        </v-snackbar>
+    </div>
 </template>
 
 <script>
@@ -84,12 +89,18 @@ export default {
     },
     data() {
         return {
-            bookmarkSelected: false
+            bookmarkSelected: false,
+            snackbar: false  //***WIP*****
         }
     },
     computed: {
         bookmarked() {
             return this.$store.getters.pathwayBookmarked(this.pathwayId);
+        }
+    },
+    watch :{
+        bookmarked(newVal){
+            this.bookmarkSelected=newVal;
         }
     },
     mounted() {
@@ -113,6 +124,12 @@ export default {
             this.$store.commit('unBookmarkPathway', this.pathwayId);
             this.bookmarkSelected = !this.bookmarkSelected;
             this.$emit('update');
+        },
+        //***WIP***
+        refreshBookmark() {
+            this.pathwayBookmarked(this.pathwayId);
+            this.$emit('update');
+            this.snackbar = true;
         }
     }
 }
