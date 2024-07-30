@@ -187,12 +187,16 @@ def scrape_link(link: str) -> dict[str: list[str]]:
                             continue
                         split = to_split.split()
                         course_id_temp = " ".join(split[0:2])
+                        if len(course_id_temp) != 9:
+                            continue
                         rest_joined = " ".join(split[2:])
                         course_name = rest_joined.rsplit(":", 1)[0].removesuffix("Credit Hours") # rsplit splits from the right, so it's sort of like .split(":" , -1) if that was a thing that existed
                         course_ids.append(course_id_temp.strip())
                         course_names.append(course_name.strip())
                     else:
                         split = to_split.split("-", 1)
+                        if len(split[0].strip()) != 9:
+                            continue
                         course_ids.append(split[0].strip())
                         course_name = split[1].strip()
                         if ("Credit Hours" in split[1]):
@@ -395,13 +399,8 @@ def verify_output(json_new, json_old, verify_file_loc):
         with open(verify_file_loc, 'w') as f:
             f.write(verify)
     
-        
-        
-    
-
-    
 if __name__ == "__main__":
-    year = "2023-2024"
+    year = "2024-2025"
     parent_path = os.path.dirname(os.path.dirname(dir_path))
     json_path = os.path.join(parent_path, "frontend", "src", "data", "json")
     path = os.path.join(json_path, str(year))
