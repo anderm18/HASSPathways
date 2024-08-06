@@ -32,8 +32,11 @@ def un_spaceify(string: str) -> str:
     string = re.sub(r"^ (?=\w)", "", string)
     string = re.sub("\u2019", "'", string)
     string = re.sub("\u2014", "-", string)
+    string = re.sub("\u2013", "-", string)
+    string = re.sub("\u2026", "...", string)
     string = re.sub("\u201c", '"', string)
     string = re.sub("\u201d", '"', string)
+    string = re.sub("\u00E9", 'e', string)
     return string
 
 def re_spaceify(string: str) -> str:
