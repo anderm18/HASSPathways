@@ -23,14 +23,16 @@ def get_catalogs() -> List[Tuple[str, int]]:
         ).text.encode("utf8")
     )
     catalogs = catalogs_xml.xpath("//catalogs/catalog")
-
+    print(f"{BASE_URL}content{DEFAULT_QUERY_PARAMS}&method=getCatalogs")
+    print(len(catalogs))
     ret: List[Tuple[str, int]] = []
     # For each catalog get its year and id and add that as as tuples to ret
     for catalog in catalogs:
         catalog_id: int = catalog.xpath("@id")[0].split("acalog-catalog-")[1]
-        catalog_year: str = catalog.xpath(".//title/text()")[0].split(
-            "Rensselaer Catalog "
-        )[1]
+        catalog_year: str = [
+            text for text in catalog.xpath(".//text()") if "Rensselaer Catalog " in text
+        ][0].split("Rensselaer Catalog ")[1]
+        print(catalog_year)
         ret.append((catalog_year, catalog_id))
 
     # sort so that the newest catalog is always first
@@ -40,7 +42,7 @@ def get_catalogs() -> List[Tuple[str, int]]:
 
 # Returns a list of course ids for a given catalog
 def get_pathway_ids(catalog_id: str) -> List[str]:
-    programs_xml = html.fromstring(
+    programs_xml = etree.fromstring(
         requests.get(
             f"{BASE_URL}search/programs{DEFAULT_QUERY_PARAMS}&method=listing&options[limit]=0&catalog={catalog_id}"
         ).text.encode("utf8")
@@ -60,7 +62,7 @@ def handle_electives(cont, courses, depts, year):
     for char in cont:
         if char.isdigit():
             level = char
-            break;
+            break
     if level == '0':
         return
     subj = "TEMP"
@@ -70,8 +72,11 @@ def handle_electives(cont, courses, depts, year):
             break
     if subj == "TEMP":
         return
-    path = '../../frontend/src/data/json/' + str(year)
-    f = open(path + '/courses.json', 'r')
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    parent_path = os.path.dirname(os.path.dirname(dir_path))
+    json_path = os.path.join(parent_path, "frontend", "src", "data", "json")
+    path = os.path.join(json_path, str(year))
+    f = open(path + 'courses.json', 'r')
     all_courses = json.load(f)
     for course in all_courses:
         ID = all_courses[course]["ID"]

@@ -29,6 +29,8 @@ Missing key in Remaining: Wind Symphony (1 credit; course may be repeated multip
 Pathway name: Narrative and Storytelling
 ----------------------------------------------------------------------------------------------------
 Pathway name: Pre-Health
+Difference in Pre-Health in One Of0
+Missing key in One Of0: level COMM and WRIT courses can be approved pending review by the HASS Associate Dean for Academic Affairs.
 ----------------------------------------------------------------------------------------------------
 Pathway name: Philosophy and Logic
 ----------------------------------------------------------------------------------------------------

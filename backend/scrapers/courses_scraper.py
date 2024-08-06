@@ -1,207 +1,320 @@
-# This scraper is mainly sourced from the QUACs team and
-# is a modified version of their catalog scraper
-
-from typing import Dict, List, Tuple
-import requests
-import sys
-from lxml import html
+from bs4 import BeautifulSoup as bs
+from selenium import webdriver
+from selenium.webdriver import Firefox
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.common.exceptions import *
 import os
-from tqdm import tqdm
 import json
-from lxml import etree
-import csv
+import time
+import re
+from itertools import chain
+import ci_scraper as ci
+import multiprocessing
 
-# The api key is public so it does not need to be hidden in a .env file
-BASE_URL = "http://rpi.apis.acalog.com/v1/"
-# It is ok to publish this key because I found it online already public
-DEFAULT_QUERY_PARAMS = "?key=3eef8a28f26fb2bcc514e6f1938929a1f9317628&format=xml"
-CHUNK_SIZE = 100
+'''
+AUGUST 2024 Course Catalog Scraper
+Uses the RPI catalog website to search for individual courses, and then scrapes all of that data. Depends a lot on consistent catalog formatting,
+so if that changes it will need work.
+Check here for formatting:
+https://catalog.rpi.edu/content.php?catoid=30&navoid=788
 
+by Giancarlo Martinelli (gcm on discord)
+'''
 
-# returns the list of catalogs with the newest one being first
-# each catalog is a tuple (year, catalog_id) ex: ('2020-2021', 21)
-def get_catalogs() -> List[Tuple[str, int]]:
-    catalogs_xml = html.fromstring(
-        requests.get(
-            f"{BASE_URL}content{DEFAULT_QUERY_PARAMS}&method=getCatalogs"
-        ).text.encode("utf8")
-    )
-    catalogs = catalogs_xml.xpath("//catalogs/catalog")
+'''
+Formatting Regex. Replaces unicode characters and removes unnessecary spaces caused by messy scraping (Sorry.)
+'''
+def un_spaceify(string: str) -> str:
+    string = re.sub("\xa0", " ", string)
+    string = re.sub(" +", " ", string)
+    string = re.sub(r"\s(?=[,.;!/]|$)", "", string)
+    string = re.sub(r"^ (?=\w)", "", string)
+    string = re.sub("\u2019", "'", string)
+    string = re.sub("\u2014", "-", string)
+    string = re.sub("\u2013", "-", string)
+    string = re.sub("\u2026", "...", string)
+    string = re.sub("\u201c", '"', string)
+    string = re.sub("\u201d", '"', string)
+    string = re.sub("\u00E9", 'e', string)
+    return string
 
-    ret: List[Tuple[str, int]] = []
-    # For each catalog get its year and id and add that as as tuples to ret
-    for catalog in catalogs:
-        catalog_id: int = catalog.xpath("@id")[0].split("acalog-catalog-")[1]
-        catalog_year: str = [
-            text for text in catalog.xpath("//text()") if "Rensselaer Catalog " in text
-        ][0].split("Rensselaer Catalog ")[1]
-        ret.append((catalog_year, catalog_id))
+def re_spaceify(string: str) -> str:
+    string = re.sub(r".(?=\w)", ". ", string)
 
-    # sort so that the newest catalog is always first
-    ret.sort(key=lambda tup: tup[0], reverse=True)
-    return ret
+'''
+Splits a list into a list of n lists. Useful for multiprocessing.
+'''
+def split(a: list[str], n: int):
+    parts = []
+    [parts.append([]) for _ in range(n)]
+    for allocating in range(len(a)):
+        parts[allocating % n].append(a[allocating])
+    return parts
 
-
-# Returns a list of course ids for a given catalog
-def get_course_ids(catalog_id: str) -> List[str]:
-    courses_xml = html.fromstring(
-        requests.get(
-            f"{BASE_URL}search/courses{DEFAULT_QUERY_PARAMS}&method=listing&options[limit]=0&catalog={catalog_id}"
-        ).text.encode("utf8")
-    )
-    return courses_xml.xpath("//id/text()")
-
-
-# Finds and returns a cleaned up description of the course
-def get_catalog_description(fields, course_name):
-    found_name = False
-    # The description is always the next full field after the course name field
-    # Itearte through the fields until we find the course name field and then return the next filled field
-    for field in fields:
-        if found_name == False:
-            name = field.xpath(".//*/text()")
-            if name and name[0] == course_name:
-                found_name = True
-        else:
-            description = field.xpath(".//*/text()")
-            if description:
-                clean_description = " ".join(" ".join(description).split())
-                # Short descriptions are usually false positives
-                if clean_description.startswith("Prerequisite"):
-                    return ""
-                elif len(clean_description) > 10:
-                    return clean_description.encode("ascii", "ignore").strip().decode().strip()
-
-    return ""
-
-def courses_from_string(inp):
-    depts = []
-
-    f = open('depts.json', 'r')
-    f = json.load(f)
-
-    for dept in f:
-        depts.append(dept)
-
-    crses = set()
-    for dept in depts:
-        fnd = inp.find(dept)
-        while fnd != -1:
-            if fnd+8 < len(inp):
-                if inp[fnd+8].isdigit():
-                    if inp[fnd+5] != '6':
-                        crses.add(inp[fnd:fnd+4] + '-' + inp[fnd+5:fnd+9])
-            fnd = inp.find(dept, fnd + 9)
-    return list(crses)
-
-def get_course_data(course_ids: List[str], catalog_id) -> Dict:
-    data = {}
-    # Break the courses into chunks of CHUNK_SIZE to make the api happy
-    course_chunks = [
-        course_ids[i : i + CHUNK_SIZE] for i in range(0, len(course_ids), CHUNK_SIZE)
-    ]
-
-    depts = []
+'''
+Large scraping function. Goes to the search page of a single course, checks if the data exists, and then scrapes the course
+'''
+def scrape_single_course(driver: Firefox, prefix:str, code:str, cis: list[str]) -> dict:
+    link = "https://catalog.rpi.edu/content.php?filter%5B27%5D={}&filter%5B29%5D={}&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=30&expand=&navoid=788&search_database=Filter&filter%5Bexact_match%5D=1#acalog_template_course_filter".format(prefix, code)
+    driver.get(link)
+    '''
+    Testing to see if the course exists. We need the webdriver waits so that selenium only does things when the necessary elements exist. 
+    If they don't load in time we probably don't have a valid course.
+    '''
+    wait = WebDriverWait(driver, timeout=2, ignored_exceptions=(NoSuchElementException))
+    try:
+        wait.until(lambda d : driver.find_element(By.CSS_SELECTOR, ".width > a:nth-child(1)").is_displayed())
+    except TimeoutException:
+        return dict()
+    if "No courses found" in driver.find_element(By.XPATH, "/html/body/table/tbody/tr[3]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td").text:
+        return dict()
+    driver.find_element(By.CSS_SELECTOR, ".width > a:nth-child(1)").click()
+    second_wait = WebDriverWait(driver, timeout=30, ignored_exceptions=(NoSuchElementException))
+    try:
+        second_wait.until(lambda d : driver.find_element(By.XPATH, "/html/body/table/tbody/tr[3]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td/table[2]/tbody/tr[2]/td[2]/table/tbody/tr/td/div[2]").is_displayed())
+    except TimeoutException:
+        print("Something probably went wrong with the XPATH")
+        return dict()
+    '''
+    Gets html, puts it into BeautifulSoup, and slices into useful parts
+    '''
+    ele = driver.find_element(By.XPATH, "/html/body/table/tbody/tr[3]/td[2]/table/tbody/tr[2]/td[2]/table/tbody/tr/td/table[2]/tbody/tr[2]/td[2]/table/tbody/tr/td/div[2]")
+    content = ele.get_attribute('innerHTML')
+    soup = bs(content, "html.parser")
+    title = soup.find("h3")
+    title.extract()
+    closes = soup.find_all("div") # For some reason there are an unknown number of Close buttons on any given course element. I get rid of those with extract()
+    for close in closes: 
+        close.extract()
+    a_tags = soup.find_all("a") # These are all of the course links
+    classes_mentioned = [] # we save the courses with links to a classes mentioned list so that we have all of the prerequisites later
+    for a in a_tags:
+        temp = a.get_text(strip=True)
+        classes_mentioned.append(temp)
+    s_string = str(soup) # we do string manipulation because the description isn't stored in any distinct tag. This is so annoying to deal with.
+    parts = s_string.split("<strong>") # all strong parts are all parts with labels (Think Prerequisites:, When Offered, etc.)
+    description_html = parts[0]
+    if prefix == "INQR": # remove this piece of code when they eventually remove the part that says that a course used to be IHSS (This exists on all INQR courses)
+        description_html = parts[1]
+        description_html = description_html.split("<br/>", 3)[-1]
+    desc_soup = bs(description_html, "html.parser") # put back into beautiful soup to remove left over tags
+    description = un_spaceify(desc_soup.get_text())
+    rest = s_string.removeprefix(description_html) # get rid of all of the description stuff to scrape remaining important labels
+    r_soup = bs(rest, "html.parser")
+    rest_text = r_soup.get_text() # get all of the text from the rest
+    delimiters = ["Prerequisites/Corequisites:","Cross Listed:", "When Offered:", "Credit Hours:", "Co-Listed:", "Contact, Lecture or Lab Hours:", "Graded:"] # these are all of the important labels that we need
+    '''
+    This code splits the course text by all of the delimiters in the delimiters list, but keeps those delimiters at the beginning of each respective part
+    '''
+    built_list = [rest_text]
+    for de in delimiters: # focus on a delimiter
+        t = []
+        for l in built_list: # go through each element of our text list
+            splitted = l.split(de, 1) # does the splitting
+            if de in l: # check if our delimiter actually exists in the thing we just split
+                splitted[1] = de + splitted[1] # adds the delimiter back
+            t.append(splitted) # stores our splitted (or not splitted) parts for later
+                
+        built_list = list(chain.from_iterable(t)) # black magic which collapses our multidimensional list into a single dimension list
+    if len(built_list) != 0: # I honestly forgot why I added this. There's probably something useless in the first position of our built list.
+        built_list.pop(0)
     
+    for i in range(len(built_list)):
+        built_list[i] = un_spaceify(built_list[i]) # some final formatting.
+    '''
+    Dictionary formatting for the json
+    '''
+    result = dict()
+    title = title.get_text(strip=True)
+    result = dict()
+    result["prerequisites"] = prerequisite_constructor(built_list, classes_mentioned)
+    result["cross listed"] = crosslisted_constructor(built_list, classes_mentioned)
+    result["description"] = description
+    result["name"] = un_spaceify(title.split("-", 1)[1])
+    result["offered"] = when_offered_constructor(built_list)
+    result["professors"] = []
+    result["properties"] = properties_constructor(prefix, code, cis)
+    result["subj"] = prefix
+    result["ID"] = code
+    return result
+
+'''
+Formats the relevent properties tag from the course object
+'''
+def properties_constructor(prefix: str, code: str, cis: list[str]):
+    result = dict()
+    result["HI"] = (prefix == "INQR")
+    result["CI"] = (prefix + "-" + code in cis)
+    result["major_restricted"] = False # no good way to check this right now, should never be true because it's a pathway
+    return result
+
+'''
+Checks if a Prerequisite tag exists, and then checks it for courses
+'''
+def prerequisite_constructor(course_data: list[str], courses_mentioned: list[str]):
+    prereq_list = []
+    looking = ""
+    for i in course_data:
+        if "Prerequisites/Corequisites:" in i:
+            looking = i
+    
+    for course in courses_mentioned:
+        if course in looking:
+            prereq_list.append(course)
+    return prereq_list
+
+'''
+Similar to prerequisite function, but for cross-listed courses
+'''
+def crosslisted_constructor(course_data: list[str], courses_mentioned: list[str]):
+    crosslist_list = set()
+    looking_cross = ""
+    looking_co = ""
+    for i in course_data:
+        if "Cross Listed:" in i:
+            looking_cross = i
+        if "Co-Listed:" in i:
+            looking_co = i
+    for course in courses_mentioned:
+        if course in looking_cross:
+            crosslist_list.add(course)
+        if course in looking_co:
+            crosslist_list.add(course)
+    return list(crosslist_list)
+
+'''
+Looks for the special text that means that a course is offered at a time.
+'''
+def when_offered_constructor(course_data: list[str]):
+    result = dict()
+    result["even"] = False
+    result["odd"] = False
+    result["fall"] = False
+    result["spring"] = False
+    result["summer"] = False
+    result["uia"] = False
+    result["text"] = ""
+    for i in course_data:
+        if "when offered:" in i.lower():
+            result["text"] = i
+    if "even years" in result["text"].lower() or "even-numbered" in result["text"].lower():
+        result["even"] = True
+    if "odd years" in result["text"].lower() or "odd-numbered" in result["text"].lower():
+        result["odd"] = True
+    if "fall" in result["text"].lower():
+        result["fall"] = True
+    if "spring" in result["text"].lower():
+        result["spring"] = True
+    if "summer" in result["text"].lower():
+        result["summer"] = True
+    if "availability of instructor" in result["text"].lower() or "upon availability" in result["text"].lower(): 
+        result["uia"] = True
+    return result
+
+'''
+Checks our pathway json to gather all courses that we need to scrape. See pathway scraper for details on the tag naming.
+'''
+def check_to_scrape(year: int) -> list[str]:
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    f = open(dir_path + '\\depts.json', 'r')
-    f = json.load(f)
+    parent_path = os.path.dirname(os.path.dirname(dir_path))
+    jsons_path = os.path.join(parent_path, "frontend", "src", "data", "json")
+    folder_title = "{}-{}".format(year - 1, year)
+    json_checking_path = os.path.join(jsons_path, folder_title, "pathways.json")
+    to_check = list()
+    with open(json_checking_path, 'r') as f:
+        j = dict(json.load(f))
+    for pathway in j.keys():
+        if "Remaining" in j[pathway].keys():
+            [to_check.append(i) for i in j[pathway]["Remaining"].values()]
+        if "Required" in j[pathway].keys():
+            [to_check.append(i) for i in j[pathway]["Required"].values()]
+        if "One Of0" in j[pathway].keys():
+            [to_check.append(i) for i in j[pathway]["One Of0"].values()]
+        if "One Of1" in j[pathway].keys():
+            [to_check.append(i) for i in j[pathway]["One Of1"].values()]
+        if "One Of2" in j[pathway].keys():
+            [to_check.append(i) for i in j[pathway]["One Of2"].values()]
+    to_check = list(set(to_check))
+    return to_check
 
-    for dept in f:
-        depts.append(dept)
+'''
+Single process scrape. Largely unnecessary because we can just use num_browsers = 1 in the multiprocess function but it's nice to have.
+'''
+def scrape_courses(year: int, pdf_name: str, json_path: str):
+    driver = webdriver.Firefox()
+    driver.implicitly_wait(2)
+    to_check = check_to_scrape(year)
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    pdf_path = os.path.join(dir_path, 'pdfs', pdf_name)
+    cis = ci.parse_pdf(pdf_path)
+    all_courses = dict()
+    for course in to_check:
+        prefix, code = course.split(" ")
+        if 'X' in code:
+            [to_check.append(prefix + " " + code.replace("X", str(i))) for i in range(0, 10)]
+            to_check.remove(course)
+    for course in to_check:
+        prefix, code = course.split(" ")
+        course_data = scrape_single_course(driver, prefix, code, cis)
+        if len(course_data.keys()) == 0:
+            continue
+        all_courses[course_data["name"]] = course_data
 
-    for chunk in course_chunks:
-        ids = "".join([f"&ids[]={id}" for id in chunk])
-        url = f"{BASE_URL}content{DEFAULT_QUERY_PARAMS}&method=getItems&options[full]=1&catalog={catalog_id}&type=courses{ids}"
+    out = json.dumps(all_courses, indent= 4)
+    print(out)
+    with open(json_path, 'w') as f:
+        f.write(out)
+    driver.quit()
 
-        courses_xml = html.fromstring(requests.get(url).text.encode("utf8"))
-        courses = courses_xml.xpath("//courses/course[not(@child-of)]")
-        for course in courses:
-            subj = course.xpath("./content/prefix/text()")[0].strip()
-            if not (subj in depts):
-                continue
-            ID = course.xpath("./content/code/text()")[0].strip()
-            if ID[0] == '6':
-                continue
-            course_name = course.xpath("./content/name/text()")[0].strip()
-            fields = course.xpath("./content/field")
-            fall = False
-            UIA = False
-            spring = False
-            summer = False
-            even = False
-            odd = False
-            offered_text = ""
-            cross_listed = []
-            prereqs = []
+'''
+Uses multiprocessing to open multiple browsers to scrape all necessary courses.
+'''
+def multi_process_scrape(year: int, pdf_name: str, json_path: str, num_browsers: int):
+    to_check = check_to_scrape(year)
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    pdf_path = os.path.join(dir_path, 'pdfs', pdf_name)
+    cis = ci.parse_pdf(pdf_path) # uses the pdf scraper to find all communication intensive courses
+    all_courses = dict()
+    for course in to_check:
+        prefix, code = course.split(" ")
+        if 'X' in code: # replaces all topics courses with all possible code combinations. Probably unnessecary.
+            [to_check.append(prefix + " " + code.replace("X", str(i))) for i in range(0, 10)]
+            to_check.remove(course)
 
-            base = int(fields[0].get('type')[-3:])
-            for field in fields:
-                field_text = field.xpath("./descendant-or-self::*/text()")
-                if len(field_text) > 0:
-                    field_text = field_text[0].strip()
+    with multiprocessing.Pool(num_browsers) as pool: # I will be honest I looked up how to do this and copied it. Multiprocessing and multithreading in python is weird.
+        parts = list(split(to_check, num_browsers))
+        results = pool.starmap(scrape_process, [(part, cis) for part in parts]) # does a scrape process with args (part, cis) for every part from our list split
+    
+    for res in results:
+        all_courses.update(res) # this should combine all of our multiprocess results together
 
-                    if field.get('type')[-3:] == str(base - 8):
-                        if len(field_text) > 0:
-                            cross_listed = courses_from_string(field_text.upper())
-                    elif field.get('type')[-3:] == str(base - 11):
-                        if "fall" in field_text.lower():
-                            fall = True
-                        if "spring" in field_text.lower():
-                            spring = True
-                        if "summer" in field_text.lower():
-                            summer = True
-                        if "even" in field_text.lower():
-                            even = True
-                        if "odd" in field_text.lower():
-                            odd = True
-                        if "availability of instructor" in field_text.lower():
-                            UIA = True
-                        offered_text = field_text
-                    elif field.get('type')[-3:] == str(base - 13):
-                        if len(field_text) > 0:
-                            if int(catalog_id) > 23 and field_text.upper().find("PREREQUISITE") != -1:
-                                prereqs_list = field.xpath("./descendant-or-self::permalink/title/text()")
-                                prereqs = courses_from_string(" ".join(prereqs_list))
-                            else:
-                                prereqs = courses_from_string(field_text.upper())
+    out = json.dumps(all_courses, indent= 4)
+    with open(json_path, 'w') as f: # dump to json file
+        f.write(out)
 
-            data[course_name] = {
-                "subj": subj,
-                "ID": ID,
-                "name": course_name,
-                "description": get_catalog_description(fields, course_name),
-                "offered": {
-                    "fall": fall,
-                    "spring": spring,
-                    "summer": summer,
-                    "odd": odd,
-                    "uia": UIA,
-                    "even": even,
-                    "text": offered_text
-                },
-                "properties": {
-                    "CI": False,
-                    "HI": True if subj == "IHSS" else False,
-                    "major_restricted": False
-                },
-                "cross listed": cross_listed,
-                "prerequisites": prereqs
-            }
+'''
+Function which the multiprocess uses
+'''
+def scrape_process(to_scrape: list[str], cis: list[str]):
+    driver = webdriver.Firefox() # starts a browser
+    driver.implicitly_wait(2) # adds an implicit wait so that selenium doesn't break and do bad things.
+    result = dict()
+    for course in to_scrape: # scrapes every course
+        prefix, code = course.split(" ")
+        course_data = scrape_single_course(driver, prefix, code, cis)
+        if len(course_data.keys()) == 0: # removes blank courses
+            continue
+        result[course_data["name"]] = course_data # builds dictionary
+    driver.quit()
+    return result
 
-    return data
-
-def scrape_courses():
-    print("Starting courses scraping")
-    catalogs = get_catalogs()
-
-    catalogs = catalogs[:4]
-    courses_per_year = {}
-    for index, (year, catalog_id) in enumerate(tqdm(catalogs)):
-        course_ids = get_course_ids(catalog_id)
-        data = get_course_data(course_ids, catalog_id)
-        
-        courses_per_year[year] = data
-
-    print("Finished courses scraping")
-    return courses_per_year
+'''
+For testing.
+'''
+if __name__ == "__main__":
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    pdf_path = os.path.join(dir_path, 'pdfs', 'fall2024-ci.pdf')
+    #cis = ci.parse_pdf(pdf_path)
+    multi_process_scrape(2025, pdf_path, "courses.json", 6)
+    #print(scrape_single_course(webdriver.Firefox(), "INQR", "1140", cis))
